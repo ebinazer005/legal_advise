@@ -1,0 +1,63 @@
+/* RetrievalPanel.css */
+.retrieval-grid {
+  display:grid; grid-template-columns:1fr 300px;
+  gap:24px; margin-bottom:28px;
+}
+
+/* Query input */
+.query-label {
+  display:block; font-size:12px; color:#7a8499;
+  letter-spacing:.5px; text-transform:uppercase; margin-bottom:8px;
+}
+.query-textarea {
+  width:100%; background:#1e2333; border:1px solid #303748;
+  border-radius:10px; padding:14px 16px; color:#d0daf0;
+  font-size:14px; font-family:'DM Sans',sans-serif;
+  line-height:1.6; resize:vertical; outline:none;
+  transition:border-color .15s;
+}
+.query-textarea:focus { border-color:#4a9eff; }
+
+/* Search button */
+.search-btn {
+  margin-top:12px; padding:10px 24px;
+  background:linear-gradient(135deg,#2a6dd9,#4a9eff);
+  border:none; border-radius:8px; color:#fff;
+  font-family:'DM Sans',sans-serif; font-weight:600; font-size:14px;
+  cursor:pointer; display:flex; align-items:center; gap:8px;
+  box-shadow:0 2px 12px rgba(74,158,255,.3);
+  transition:all .2s;
+}
+.search-btn.loading   { background:#2a3040; box-shadow:none; cursor:not-allowed; }
+.search-btn:not(.loading):hover {
+  background:linear-gradient(135deg,#3278e8,#5aaaff);
+  box-shadow:0 4px 16px rgba(74,158,255,.4);
+}
+
+.spinner {
+  width:14px; height:14px;
+  border:2px solid rgba(255,255,255,.3);
+  border-top-color:#fff; border-radius:50%;
+  animation:spin .8s linear infinite;
+}
+
+/* Params card */
+.params-card { background:#1e2333; border:1px solid #2a3248; border-radius:10px; padding:18px 20px; }
+.params-title { font-weight:600; font-size:14px; color:#c0c8d8; margin:0 0 18px; letter-spacing:-0.2px; }
+
+/* Results */
+.results-section { animation:fadeIn .4s ease; }
+.result-block    { margin-bottom:24px; }
+.result-block h2 { font-weight:700; font-size:20px; color:#e0e8ff; margin:0 0 10px; letter-spacing:-0.3px; }
+.result-query-text { color:#9aa3b5; font-size:14px; line-height:1.6; }
+.sources-count   { font-size:14px; color:#4a9eff; font-weight:500; }
+
+.response-card { background:#1e2333; border:1px solid #2a3248; border-radius:10px; padding:18px 20px; }
+.response-para { color:#b0bcd8; font-size:14px; line-height:1.8; }
+.response-para + .response-para { margin-top:12px; }
+
+/* Empty state */
+.empty-state      { text-align:center; padding:40px 20px; color:#3a4460; }
+.empty-icon       { font-size:40px; margin-bottom:12px; opacity:.4; }
+.empty-state p    { font-size:14px; }
+.empty-hint       { font-size:12px !important; margin-top:6px; }

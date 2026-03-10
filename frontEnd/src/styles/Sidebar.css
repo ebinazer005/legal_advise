@@ -1,0 +1,17 @@
+/* Sidebar.css */
+.sidebar {
+  width:220px; min-height:100vh;
+  background:#1a1f2e; border-right:1px solid #252c3d;
+  display:flex; flex-direction:column;
+}
+
+.nav-list { border-top:1px solid #252c3d; padding-top:12px; }
+
+.nav-item {
+  padding:10px 20px; cursor:pointer; font-size:14px; font-weight:400;
+  color:#7a8499; background:transparent;
+  border-left:3px solid transparent;
+  transition:all .15s ease; user-select:none;
+}
+.nav-item:hover  { color:#a0aabb; }
+.nav-item.active { font-weight:500; color:#f0f0f0; background:#252c3d; border-left-color:#4a9eff; }

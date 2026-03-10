@@ -1,0 +1,31 @@
+/* global.css — Base reset, fonts, animations, shared panel styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #141824;
+  color: #c0c8d8;
+}
+
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: #1a1f2e; }
+::-webkit-scrollbar-thumb  { background: #2e3650; border-radius: 3px; }
+
+/* Animations */
+@keyframes pulse   { 0%,100%{opacity:1} 50%{opacity:.4} }
+@keyframes slideIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+@keyframes spin    { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes fadeIn  { from{opacity:0} to{opacity:1} }
+
+/* App layout */
+.app { display:flex; min-height:100vh; background:#141824; }
+.main-content { flex:1; display:flex; flex-direction:column; overflow-y:auto; position:relative; }
+
+/* Shared panel base */
+.panel { flex:1; padding:32px 36px; position:relative; overflow-y:auto; }
+
+.panel-title { display:flex; align-items:center; gap:14px; margin-bottom:28px; }
+.panel-title h1 { font-weight:700; font-size:28px; color:#f0f4ff; letter-spacing:-0.5px; }
+.panel-title-icon { font-size:28px; }

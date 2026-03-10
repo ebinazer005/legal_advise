@@ -1,0 +1,11 @@
+/* TopBar.css */
+.top-bar { position:absolute; top:16px; right:16px; display:flex; gap:8px; z-index:10; }
+
+.top-bar-btn {
+  width:36px; height:36px; border-radius:8px;
+  background:#252c3d; border:1px solid #303748;
+  color:#9aa3b5; cursor:pointer; font-size:16px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .15s;
+}
+.top-bar-btn:hover { background:#2e3650; color:#f0f0f0; }

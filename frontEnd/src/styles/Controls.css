@@ -1,0 +1,55 @@
+/* Controls.css — NumberStepper + SliderControl */
+
+/* Shared label row */
+.param-label-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.param-label     { display:flex; align-items:center; gap:6px; font-size:13px; color:#c0c8d8; }
+.param-value     { font-size:13px; color:#4a9eff; font-family:'DM Mono',monospace; font-weight:600; }
+.tooltip-icon {
+  width:16px; height:16px; border-radius:50%;
+  background:#2e3650; border:1px solid #3a4460;
+  color:#7a8499; font-size:10px; cursor:help;
+  display:flex; align-items:center; justify-content:center;
+}
+
+/* ── Number Stepper ── */
+.stepper-wrapper { margin-bottom:20px; }
+
+.stepper-control {
+  display:flex; align-items:center;
+  background:#1e2333; border:1px solid #303748;
+  border-radius:8px; overflow:hidden;
+}
+.stepper-value { flex:1; padding:10px 14px; color:#e0e8f5; font-size:14px; font-family:'DM Mono',monospace; }
+.stepper-btn {
+  width:36px; height:38px; background:#252c3d;
+  border:none; border-left:1px solid #303748;
+  color:#9aa3b5; cursor:pointer; font-size:18px;
+  display:flex; align-items:center; justify-content:center;
+  transition:background .15s, color .15s;
+}
+.stepper-btn:hover { background:#2e3650; color:#f0f0f0; }
+
+/* ── Slider ── */
+.slider-wrapper { margin-bottom:20px; }
+
+.slider-track { position:relative; height:6px; border-radius:3px; background:#2a3040; }
+
+.slider-fill {
+  position:absolute; left:0; top:0; height:100%;
+  background:linear-gradient(90deg,#2a6dd9,#4a9eff);
+  border-radius:3px; transition:width .1s; pointer-events:none;
+}
+.slider-input {
+  position:absolute; inset:0; width:100%; height:100%;
+  opacity:0; cursor:pointer; margin:0;
+}
+.slider-thumb {
+  position:absolute; top:50%;
+  transform:translate(-50%,-50%);
+  width:14px; height:14px; border-radius:50%;
+  background:#4a9eff; border:2px solid #1a1f2e;
+  box-shadow:0 0 6px rgba(74,158,255,.6);
+  pointer-events:none;
+}
+.slider-range-labels { display:flex; justify-content:space-between; margin-top:4px; }
+.slider-range-label  { font-size:11px; color:#4a5568; font-family:'DM Mono',monospace; }

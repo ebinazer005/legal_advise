@@ -1,0 +1,57 @@
+rules of hooks 
+------------------
+	-always use inside the function component 
+	-dont use inside the loop and if statement 
+
+	
+
+useState()
+
+useRef()
+forwardRef()
+useImparativeHandle()
+
+createContext  -------------contextProvider,contextConsumer
+useContext()
+useReducer()
+
+useEffect()
+usecallBack()
+
+custom hook()
+
+useActionStatus();
+
+	syntax
+		const [message, formAction, isPending] = useActionState(updateName, 'Hello');
+		
+		
+	Hello ----> is initial state value for (message),,
+	formAction ------------>it hold updateName function value
+	
+	isPending------------->using for wait the action like (make disable for button element for loading);
+
+
+redux hook
+------------
+	-useSelector()
+	-useDispatch()
+
+
+Router
+--------
+	useNavigate();
+	useSearchParams(); ------------->route via the params
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+frameworks
+---------------
+	-LangGraph----- ai framework 
+	-LangChain ----ai frameworking 
+
+	tailwind ------>css framework
+	
+	million ----->it make react application more faster 
+	

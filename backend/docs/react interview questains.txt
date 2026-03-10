@@ -1,0 +1,1423 @@
+component vs element 
+	
+	element 
+		-created by react.createelement or jsx 
+		-it tell the react how ui look like 
+	
+	component 
+		it is a block that contain multiple elements to build a ui 
+--------------------------------------------------------------------------
+controller component vs uncontrolled component 
+	
+	controlled 
+		-it all value controller by state  
+		-id use a usestate that is controlled component 
+		-it value change it rerender the whole component 
+	
+	uncontrolled component 
+		
+		-when we dont use a usestate the value totally controlled by a dom 
+		-that is uncontrolled component 
+
+--------------------------------------------------------------------------
+Why should we NOT update state directly in React?
+	
+	-because react will not deduct the changes  
+	-and it will not re render the component 
+--------------------------------------------------------------------------
+
+usestate vs use ref 
+
+usestate
+	use state is handle the dynamic value in react is u want to change the value dynamically  we should use a usestate 
+
+use ref 
+	useref is handle for input value we can use instead of onchange but it render the whole component useref is change the value only 
+--------------------------------------------------------------------------
+
+	
+
+1)what is react?
+	-react is javascript library not framework
+	-allow us to create to single page apps(spa) for short
+	-its create a UI in compound based 
+--------------------------------------------------------------------------
+
+2)what is framework?
+
+	framework do multiple things like providing tools dependance injection 
+---------------------------------------------------------------------------
+3)what is library?
+
+	library it focusing only  one thing (in this case react only doing building UI and assigning a multiple component in a structured way) also react not even doing styling u need to use CSS for that 
+
+---------------------------------------------------------------------------
+4)why learn react?
+	-main thing react is component based architecture u can easily make any update using REACT DOM if u want
+
+	-you can write reusable code using react js 
+---------------------------------------------------------------------------
+5)what is react dom
+
+	-REACT DOM is like bridge between a react and react and Actual Dom
+	
+	-actual DOM
+
+		(actual dom from browser is get a HTML elements from a .html page and create on tree structure)
+		-The Actual DOM (Document Object Model) is the real HTML structure of a webpage, 
+		-created and managed by the browser. (e.g., <div>, <p>, <button>).
+		-The browser parses the HTML file and creates the DOM tree.
+		-JavaScript can modify the DOM using methods like document.getElementById() or document.querySelector().
+			
+	
+	-react
+		-REACT is creating a virtual representation of UI
+	
+	-REACT DOM 
+		-REACT DOM is a library it efficiently make changes in ACTUAL DOM based on the VIRTUAL DOM
+		
+	-virtual dom
+		-it lightweight copy of the real DOM
+		-it just figure out which part of the UI need to update 		
+		-REACT DOM receiving those information from a virtual dom that send those information to the DOM 
+
+	
+
+---------------------------------------------------------------------------
+6)what is component and type of component 
+
+-component 
+	-component is part of UI
+	-they are reusable it can be nested inside the component 
+	
+	
+-type
+	-i)stateless function component 
+	-ii)stateful class component 
+
+i)stateless function component	   
+	-it simple javascript function that takes props as a argument and return jsx
+	- It does not manage its own state or methods
+
+	
+	-no state means
+		-A stateless function component cannot have a this.state object like class components.
+		-It simply receives data (props) from its parent component 
+		-It does not store or modify any data internally.
+
+	------------------------------------------------------
+		const Greeting = (props) => {
+ 			 return <h1>Hello, {props.name}!</h1>;
+		};
+	--------------------------------------------------------
+
+ii)stateful class component
+
+	-class extending component class Render methods returning HTML
+	
+       -----------------------------------------------------		
+	import React, { Component } from 'react';
+
+	class Example extends Component {
+  		render(){
+		return <h1>hello {this.props.name} </h1>
+		}
+  	}
+	------------------------------------------------------
+	
+	-Manages internal state (this.state)
+	-More complex than function components
+	-Before React Hooks, this was the only way to handle state
+
+	-------------------------------------------------------------
+		-now day modern developers  mostly (function component)
+	with hook
+	-------------------------------------------------------------
+
+
+	
+
+	
+---------------------------------------------------------------------------
+		 
+7)hooks
+	
+ 	-2018 react intraduce hooks
+	it let u use a state and other react feature without writing a class
+
+	state in react 
+	---------------
+		-state is a object in react that store dynamic data 
+	
+	-old way
+	---------------------------------------------------------------
+	import React, { Component } from 'react';
+
+	class Example extends Component {
+  		constructor(props) {
+    		super(props);
+    		this.state = { count: 0 }; // Initial state
+  		}	
+		increment = () => {
+    	this.setState({ count: this.state.count + 1 }); // Updating state
+ 		 };
+  	}
+	-----------------------------------------------------------------
+		 
+		
+	new way 
+	---------------------------------------------------------------
+	import React, { useState } from 'react';
+
+	const Counter = () => {
+  	const [count, setCount] = useState(0); // State declaration
+	
+	render() {
+    	return (
+      		<div>
+       		 <h1>Count: {this.state.count}</h1>
+        	 <button onClick={this.increment}>Increment</button>
+      		<div>
+    		);
+
+	
+	---------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+8)JSX(JAVA SCRIPT XML)
+	
+	-It allows you to write HTML-like code inside JavaScript,making it easier to create and manage React components.
+	-without jsx also u can create your UI but it will complex 
+	
+	without JSX
+	
+		import react from 'react'
+		
+		react.createElement("div",{}, React.createElement("h1", { id: "k" }, "Hello World"));
+		
+		-it bit complicate so we use a JSX
+	
+	
+	with jsx in react 
+		
+		const a=()=>{
+			return <>
+				<h1>hello world</h1>	
+				</>	
+			}
+	
+	-it mostly look like html but it not html 
+	-it copy of react.creactElement
+	-when  create a jsx it automatticaly converted to REACT.createElement()
+	
+		
+	-when u create a <h1 classname="dvc",id="fv">jnf</h1> it convert to the object 
+	
+	obeject={
+		type:h1
+		prop{
+			classname="dvc",
+			id="fv"	
+		}
+	}	
+	
+	in react all object store in a virtual dom
+
+
+	
+u can't create a jsx in normal js file
+---------------------------------------
+	-bowser cannot understand the JSX it need tool called(BABEL) to convert a jsx to normal js code ( REACT.createElement())
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9)props
+	
+	-props is using for passing data from a parent component to child component 
+	-and it make program reusable also 
+	
+	app.js
+		<home name="ebi">
+
+		
+	
+	
+	home.js
+		const=(props)=>{
+			return <h1> hello {props.name} </h1>
+		}
+
+
+	we con also retrieve a content or elements also
+	---------------------------------------------------
+
+	app.js
+		<home name="ebi">
+			<p>this a children tag </p>
+		</home>
+
+		
+	
+	
+	home.js
+		const=(props)=>{
+			return(
+				<>
+				{props.children}
+				</>
+			)
+		}
+		
+
+
+propes as method
+----------------
+
+	parendCompnent.js
+		
+		import ChildComponent from './ChildComponent'
+			
+		const parent =()=>{	
+				 const greetingParent = () =>{
+					alert='hello parent'	
+				}
+			
+			return(
+
+				</ChildComponent greeting={greetingParent}>
+		
+				)
+			
+			
+			}
+		
+			
+	ChildComponent.js
+
+				const parent =(propes)=>{	
+				
+			return(
+
+				<> <h1>Greeting from Child</h1>
+      				<button onClick={props.greeting}>Click to greet parent</button>
+				</>		
+				)
+			
+			
+			}
+	
+		
+
+	
+	
+parameter
+---------
+
+	import ChildComponent from './ChildComponent'
+			
+		const parent =()=>{	
+				 const greetingParent = (ChildPropes) =>{
+					alert=('hello parent' ${ChildPropes});	
+				}
+			
+			return(
+
+				</ChildComponent greeting={greetingParent}>
+		
+				)
+			
+			
+			}
+		
+			
+	ChildComponent.js
+
+				const parent =(propes)=>{	
+				
+			return(
+
+				<> <h1>Greeting from Child</h1>
+      				<button onClick={()=>props.greeting('child')}>Click to greet parent</button>
+				</>		
+				)
+			
+			
+			}
+	
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------		
+10)state 
+	
+diffrent b/w propes and state
+-------------------------------
+		
+		props
+		------
+			-props get passed to the component 
+			-function paramenter 
+			-props in immutable 
+			-props using in function component ()
+			-usestate HOOK - function component 
+		state
+		------
+			-state is managed within the component
+			-variable declare in the function bidy 
+			-state can be changed 
+			-this.state in class components
+	
+stateful class component
+-------------------------
+	import React, { Component } from 'react';
+
+	class Example extends Component {
+			
+		constructor(){
+			super()
+				this.state={
+					message:"hello"
+					}
+				}
+		
+			changeMEssage=()=>{
+				this.setState({
+					message:"thankyou"	
+					})		
+				}
+
+		
+  		render(){
+		
+		return <h1>hello {this.state.message}</h1>
+		<button onClick {() => this.changeMessage()}> click</button>
+			
+		}
+  	}
+
+stateless function component
+-----------------------------
+
+		import React, { useState } from "react";
+	
+		const Home=()=>{
+
+			const [first,setFirst]=useState('hello')
+			
+			function changeMessage(){
+				setFirst("welcome")	
+				}
+			
+			return (<>
+				<h1>{first}</h1>
+				<button onClick={changeMessage}>click</button>
+				
+			</>)
+		}
+	
+
+
+		
+
+	
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11)Event
+
+	i)click event
+	--------------
+		onClick()---->in react onclcik should be Camalcase	
+		
+			const click=()=>{
+		
+				 clcikFunction(){
+					console.log("working")	
+					
+				}
+
+
+				return(
+					<button onClick={clcikFunction}>click</button>	
+				)
+				
+			}
+
+		
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12)binding method 
+
+	if increment() didn't use a arrow function we need to use bind methos to run 
+
+
+ `increment() {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+ render() {
+  return <button onClick={this.increment.bind(this)}>Click</button>;
+}
+
+----------------------------------------------------------
+class Ebi extends Component {
+  constructor() {
+    super();
+    this.state = { count: 0 };
+    this.increment = this.increment.bind(this); // binding here
+  }
+
+  increment() {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+ render() {
+  return <button onClick={this.increment.bind(this)}>Click</button>;
+}
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13)conditional rendering
+  ----------  ----------
+	-if/else
+	-Element Variable
+	-ternary conational operator
+	-short circuit operator 
+	
+	
+	
+i) if/else
+	
+	import React,{useState} from 'react';
+
+const Ebi=()=>{
+        const [name,cangeName]=useState('ebi');
+
+        changeNa=()=>{
+            cangeName('ebinazer')
+        }
+           if(name == 'ebi'){
+             message=<h1>{name} +" not changed"</h1>
+                }
+        else{
+           message=<h1>{name} +"changed"</h1>
+        }
+
+      return (
+                        <>
+                            <h1>{message}</h1>
+                <button onClick={changeNa}>clcik</button>
+                            </>
+                        );
+   
+}
+
+export default Ebi;
+
+
+ii)ternary conational operator
+	
+syntax
+	condition ? expressionIfTrue : expressionIfFalse'
+
+code
+	instead of using IF ELSE 
+
+ {name == "ebi"  ?  message=<h1>{name} +" not changed"</h1> : message=<h1>{name} +"changed"</h1> }
+
+
+
+
+Iv)short circuit operator	
+	{value &&<h1>ebinazer</h1>}
+	
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+14)list
+	
+   .map method 
+----------------
+	-In React, we use JavaScript’s built-in .map() method to loop over an array and render multiple components or elements dynamically.
+
+import React,{useState} from 'react';
+
+const Ebi=()=>{
+        a=[1,2,3]
+ return(
+        <>
+            <h1>{a.map(b=>b*2) +""}</h1>
+            
+        </>
+    )
+   
+}
+export default Ebi;
+
+
+output
+------
+	2,4,6
+--------------------------------------------------------------------
+	List
+	-----
+	
+	import React,{useState} from 'react';
+
+const Ebi=()=>{
+     const people = [
+    { name: "Ebinazer", age: 23, place: "Chennai" },
+    { name: "Abi", age: 25, place: "Coimbatore" },
+    { name: "Dani", age: 22, place: "Madurai" },
+  ];
+ return(
+        <>
+            <h1>{people[1].name}</h1>
+             <h1>{people[1].age}</h1>
+             <h1>{people[1].place}</h1>
+            
+        </>
+    )
+   
+}
+export default Ebi;
+
+
+-------------------------------------------------------------------------------------------------------
+
+							   ----------------------------------------------		
+instead of using like this we use map to return this value | don't forget to 'index' to return large data | 
+							   ----------------------------------------------									
+--------------------------------------------------------------------------------------------------------
+import React,{useState} from 'react';
+
+const Ebi=()=>{
+     const people = [
+    { name: "Ebinazer", age: 23, place: "Chennai" },
+    { name: "Abi", age: 25, place: "Coimbatore" },
+    { name: "Dani", age: 22, place: "Madurai" },
+  ];
+    let peoples=people.map((pep,index)=>(
+        <div key={index}>
+            <p>{pep.name}</p>
+            <p> {pep.age}</p>
+             <p>{pep.place}</p>
+        </div>
+    
+    ));
+ return(
+        <>
+            <h1>{peoples}</h1>
+            
+        </>
+    )
+   
+}
+export default Ebi;
+
+-----------------------------------------------------------------------------------------------
+
+if using id(unique) using key u can itrate multiple properties 
+--------------------------------------
+
+import React,{useState} from 'react';
+
+const Ebi=()=>{
+const a=[{id:1, name: "Ebinazer", age: 23, place: "Chennai" },
+     {id:2, name: "Abi", age: 25, place: "Coimbatore" },
+     {id:3, name: "Dani", age: 22, place: "Madurai" },];
+
+   let b=a.map((pep)=>(
+       <div key={pep.id}>
+           <p>{pep.name}</p>
+           <p>{pep.age}</p>
+           <p>{pep.place}</p>
+       
+       </div>
+   ));
+    return <>
+        {b}
+    </>
+        
+}
+export default Ebi;
+
+--------------------------------------------------------------------------------------------------------------
+
+style the css
+--------------
+	import style page (import  "./styles.css";)
+	use 'className'
+	
+	<p className="car">sjo</p>
+--------------------------------------------------------------------------------------------------------------todo input
+------------
+
+import { useState } from "react";
+import  "./styles.css";
+
+
+const Input = () => {
+  const [count, setCount] = useState(0); // Track how many inputs to show
+counts=0
+  function Todo() {
+    setCount(count=> count+=1); // Increment count on every click
+
+  }
+
+  return (
+    <>
+      <button onClick={Todo}>uriwnsv</button>
+      {Array.from({ length: count }).map(() => (
+        <input />  
+      ))}
+    </>
+  );
+};
+
+export default Input;
+
+--------------------------------------------------------------------------------------------------------------
+reusable code 
+	
+	reuse_code.js
+	-------------
+		import { useState} from "react"
+
+const Reuse=()=>{
+const [og,setState]=useState(false)
+
+    function change(){
+        setState(prev=>!prev);
+    }
+return {og,change};
+};
+
+export default Reuse;
+
+
+Form.js
+-------
+import Reuse from "./reuse_code" 
+
+const Form = () => {
+      
+const {og,change}=Reuse();
+    
+  console.log(og)
+   
+  return (
+    <>
+      <button onClick={change}>click <span>{og ? '+' : '-'}</span></button>
+       {og && <p>ebi</p>}
+    </>
+  );
+};
+export default Form;
+
+
+
+----------------------------------------------------------------------------------------
+import Reuse from "./reuse_code" 
+
+const Form = (probs) => {
+  // const [og,change]=useState(false)
+    
+    
+const {og,change}=Reuse();
+    
+  console.log(og)
+   
+  return (
+    <>
+        <FormContent change={change} title={probs.title} spanContent={og ? '+' : '-'}  />
+     
+       {og && <p>{probs.content}</p>}
+    </>
+  );
+};
+
+const FormContent=(probs)=>{
+    const {change,title,spanContent}=probs;
+    return(<>
+      <button onClick={change}>{title} <span>{spanContent}</span></button>
+    </>)
+  
+}
+
+
+export default Form;
+
+
+
+--------------------------------*---------------------------*---------------------------*_----------------------------------*------------------------------*-----------
+
+
+
+
+	
+
+
+
+what is strict Mode?
+	-when use a Strict mode if u do any minor mistack in your code it wont allow u to run 
+	for ex 
+	
+	import {import { StrictMode } from 'react'}
+	ReactDOM.createRoot(document.getElementById('root')).render(<StrictMode><App /></StrictMode>);
+
+
+
+if u do like this 
+	
+	a=1
+	console.log(a);
+it wont work (because u missed the data type like 'var')
+
+*without strict mode it will work*
+
+
+
+useref
+-------
+	 -when we use the ref if update any thing in web app using useref it (update once) and (persist value) it wont allow to re-render the value 
+
+different between state and use-ref
+------------------------------------
+	-why state means when we use onChange we need touse useState for store the message 
+	-it re-render entire component if any update happened 
+	-it wont re-render it 
+
+
+forward-ref 
+-----------
+	parent component-(app)
+	child component - (input.jsx)
+	dom element (div, section)
+
+	-we can access the child component dom element data into the parent component 
+	-we can access the whole dom element data to child component 
+
+		import { forwardRef,useImperativeHandle,useRef} from "react";
+		const Diaolog = forwardRef(({time,result}, ref) => {
+
+    		return ( <>
+   			 <dialog ref={dialog} className="result-modal" open>
+       				 <h1> you {result}</h1>
+        			<p>the targer time was <strong>{time}</strong> seconds.</p>
+         			<p>you stopped the timer with <strong>x second left .</strong></p>
+         			<form method="dialog">
+           				 <button>Close</button>
+         			</form>
+         
+    			</dialog> 
+				 </> );
+				});
+ 
+			export default Diaolog;
+	
+
+useImparativeHandle()
+----------------------
+	-useImperativeHandle() is a React Hook 
+	-if we use a forward-ref to pass the dom elements to parent component if we change the element name it wont work 
+	- that why we use useImparativeHandle() 
+
+		import { forwardRef,useImperativeHandle,useRef} from "react";
+		const Diaolog = forwardRef(({time,result}, ref) => {
+
+    			const dialog =useRef();
+    			useImperativeHandle(ref,()=>{
+        			return{
+            				open(){
+                    			dialog.current.showModal();
+            					}
+     					}
+    				})
+    		return ( <>
+   			 <dialog ref={dialog} className="result-modal" open>
+       				 <h1> you {result}</h1>
+        			<p>the targer time was <strong>{time}</strong> seconds.</p>
+         			<p>you stopped the timer with <strong>x second left .</strong></p>
+         			<form method="dialog">
+           				 <button>Close</button>
+         			</form>
+         
+    			</dialog> 
+			 </> );
+				});
+ 
+			export default Diaolog;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+portal 
+----------
+	-using for avoiding the layout conflict 
+	-some time we use the forwardRef the dom element store in a parent dom tree structure 
+	-some time it make layout conflict 
+	- USING the portal we can give the dom element in proper way 
+	
+	usage import the portal using:
+		import { createPortal } from 'react-dom';
+		
+	in index.html
+		<div id="model"></div>
+
+	
+	
+	.jsx file 
+		
+		const home =()=>{
+	
+			return createPortal(<
+				<div>
+					<h1>EBI</H1>
+					<p>nazer selvaraj</p>
+				</div>
+			>,document.getelementById('model'));
+		}
+	
+------------------------------------------------------------------------------------------------------------------------------------
+filter() -------?>(mostly using for if we want to delete something)
+
+	-method creates a new array with all elements that pass a test
+	-it keeps the data is true only
+
+
+ import React, { useState } from 'react';
+
+   function MyComponent() {
+     const [items, setItems] = useState(['item1', 'item2', 'item3']);
+																			
+     const handleDelete = (itemToDelete) => {		
+       setItems((previous)=>previous.filter(item => item !== itemToDelete));      (  For 'item1': item !== 'item1' → 'item1' !== 'item1' → false, so exclude this item.
+
+								     For 'item2': item !== 'item1' → 'item2' !== 'item1' → true, so keep this item.
+
+								     For 'item3': item !== 'item1' → 'item3' !== 'item1' → true, so keep this item.)
+
+ };
+
+     return (
+       <div>
+         <ul>
+           {items.map((item, index) => (
+             <li key={index}>
+               {item}
+               <button onClick={() => handleDelete(item)}>Delete</button>
+             </li>
+           ))}
+         </ul>
+       </div>
+     );
+   }
+
+   export default MyComponent;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+.find()
+------
+	const product = DUMMY_PRODUCTS.find((product) => product.id === id);
+
+	-.find() is used to return the first element in an array that matches a condition;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+
+context in react??
+
+	In React, Context is a way to share values like data or functions between components without having to pass props manually at every level of the component(child, sibling, parent)
+
+3 things
+	-create context
+	-provide context --->it receive and provider the data 
+	-consume context ----> it receive from provider
+two way to receive the data one is a "useContext" hook and "consumer" object 
+
+
+-create context
+	import {createContrext} from 'react';
+
+	const UserContext =createContrext()------------>variable must a start with uppercase
+	
+	export default UserContext
+	
+
+-provide context
+	in parent component
+
+
+	import {createContrext} from './jnd';
+	const App()=>(){
+	
+		const [data,setData]={name:ebi,age:24,place:kodaikanal}
+
+		return(<>
+		<createContrext.Provider value={{data}}>
+			
+			<Home />
+			<place />
+			<Login />
+		
+		</createContext.Provider>
+	
+		</>)
+	}
+
+
+now we can access the 'data object' in every component 
+	
+	
+-*consume context  two way(consume ,useContext Hook)*
+
+	1)useContext
+		
+		import { useContext } from 'react';
+		import {createContrext} from './jnd';
+ 
+		const usecontectdata = useContext(createContrext);
+		const Home() => (){	
+			
+			return(
+				<h1>{usecontectdata.name}</h1>
+			
+			)
+		}
+
+
+	2)consume
+		
+		import {createContrext} from './jnd';
+ 
+		
+		const Home() => (){	
+			
+			return(
+				<createContrext.Consumer>
+				{
+					({data})=>(
+					return(
+						<h1>{data.name}</h1>
+
+						)
+					
+						
+					)
+					
+				}
+				
+				</createContrext.Consumer>
+				
+			
+			)
+		}
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	
+useReducer 
+	
+	-useReducer is similar to useState because both manage state in a component, but useReducer is better when the state logic is more complex.
+
+	-In useReducer, we pass two things: a reducer function and an initial value. The reducer function takes two arguments: the current state and an action. Based on the action, it returns a new state. 
+	-We use dispatch to send the action, and that triggers the state update.
+
+	-""""The key difference is: useState is good for simple state updates, while useReducer helps when we have multiple conditions or steps to update the state—it makes the logic easier to manage and test.""""
+
+
+
+syntext 
+
+
+import React from 'react';
+export function counterReducer(state ,action) {
+    
+    if(action.type === "INCREMENT"){
+        return{
+            count : state.count+1
+        };
+    }
+    else if(action.type === "DECREMENT"){
+         return{
+            count : state.count-1
+        };
+    }
+    
+    else if(action.type === "RESET"){
+         return{
+            count:0
+        };
+    }
+    
+    return state;
+  }
+    
+
+
+
+
+function App() {
+    const [state , dispatch] = React.useReducer(counterReducer, {count : 0});
+    
+    function increment(){
+        
+        dispatch({type:'INCREMENT'});
+    }
+    
+    function decrement(){
+       
+        dispatch({type:'DECREMENT'});
+    }
+    
+    function reset(){
+        
+        dispatch({type:'RESET'});
+    }
+    
+  return (
+    <div id="app">
+      <h1>The () Counter </h1>
+      <p id="actions">
+        <button onClick ={increment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
+        <button onClick={reset}>Reset</button>
+      </p>
+      <p id="counter">{state.count}</p>
+    </div>
+  );
+}
+
+export default App;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useEffect();
+
+		-it useEffect contain two parameters  one is callback function and another one is array
+		-useEffect is using for if we want to render once (mounting)  anything  from the starting of the component it will useful
+		-if we want to render the useeffect every time the particular state update use the dependency like this ex(,[stateValue]) ---------->updating 
+		-unmounting after that we need to clean the useeffect using return (it prevent the memory leaking and)
+
+react lifecycle
+		-will mounting ---------->create add adding to the DOM 
+		-did updating  ---------->when updating or re rendering the DOM
+		-will unmounting -------->it remove from the Dom
+		
+		
+
+	syntext
+		useEffect(()=>{
+			const interval = setInterval(()=>{
+				
+			},1000)
+
+		return ()=>clearinterval(interval);
+		},[])
+
+	when dependency add
+
+		--IT WILL RERENDER THE USEEFFECT EVERY TIME STATE VALUE UPDATED 
+
+	useEffect(()=>{
+			const interval = setInterval(()=>{
+				
+			},1000)
+
+		return ()=>clearinterval(interval);
+		},[stateValue])
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+useCallback()
+	-it some like useCallback() function 
+	
+	-useCallback it doesn’t get recreated on every render.
+
+	-Returns the same function instance unless dependencies change.
+
+	-Useful when passing a function to a child component or when using inside an effect.
+	
+	
+	main different between the useeffect and usecallback 
+	
+	useeffect 
+		-it manage the react lifecycle 
+		-and it run the function after the first component render and
+		- every re render when pass the dependency   	
+		-it usfull when we call api 
+	usecallback
+		-use call back is storing the function in internal memory and every render it return the reference
+		-until anything change the function 
+		-it really helpful when we pass the function to child component 
+
+
+const memoizedCallback = useCallback(
+  () => {
+    // your function code
+  },
+  [dependencies],
+);
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+memo()
+	-memo and useMemo both are different
+	
+	-memo
+ 	    -Prevents unnecessary re-renders of a functional component if its props haven't changed. 
+
+		import React, { memo } from 'react';
+
+		const MyComponent = ({ name }) => {
+ 		 console.log('Rendered');
+ 		 return <div>Hello, {name}</div>;
+		};
+
+		export default memo(MyComponent);
+	
+	
+	react.memo()
+			memorize whole components to prevent re-rendering if props don’t change
+		
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------				
+useCallback , usememo ,use effect ,and react.memo()?
+	
+	
+	-React provides several tools to prevent unnecessary re-renders, but each works at a different level.
+
+usecallback()
+	
+	-working on the function level if function value not change it wont retender the component 
+	-it store in react internal memory and take reference only if value change it update the reference 
+	
+usememo()
+	
+	-return value level 
+	-if return value not change it wont rerender the component 
+
+react.memo()	
+	-it is child component level 
+	-if props value not change it wont alow the component rerender
+	
+useEffect()
+	
+	-it component level and handle the lifecycle and  sideeffects
+	-it rerender the function only the first time the component render unless we give a dependency 
+	-manly using for handle the api call side effects  
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+prevent default()	
+	
+	default browser behavior 
+		-when u click the submit button in a ' FORM ' when u click the button the page will get reload 
+		 
+prevent default
+	-it using for prevent some default behaviour 
+	-like 
+		-page reload  
+		-<a> click → page navigation
+	
+ex 
+
+	export default function Signup() {
+
+
+  	const handleSubmit =(event)=>{
+		
+		event.preventDefault();
+	
+	}
+
+	return(
+
+		<form onSubmit = {handleForm}>
+
+		
+		</form>
+	)
+
+	}
+		
+		
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------	
+FormData()
+	-its browser inbuild method 
+	-it mainly using for get the data from the form and sent to database via fetch and axios 
+	
+	methods 
+		get()
+		getAll()
+		
+		-using this object u can get the all data concurrently 
+
+		const filedata = new FormData(event.target);
+		const data = Object.formEntries(filedata.entries());
+	 
+	
+	
+syntex 
+	
+	export default function Signup() {
+
+
+  	const handleSubmit =(event)=>{
+		
+		event.preventDefault();
+	
+		const filedata = new FormData(event.target);`
+		const data = Object.formEntries(filedata.entries());
+		
+	
+	}
+
+	return(
+
+		<form onSubmit = {handleForm}>
+
+		
+		</form>
+	)
+
+	}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+routing 
+
+install
+	npm install react-router-dom  
+
+
+import { createBrowserRouter , RouterProvider } from react-router-dom
+import Home from './home';
+import Cart from './cart';
+function App() {
+
+import Home from './home';
+import Product from "./Product";
+import Error from './Error';
+import { createBrowserRouter ,RouterProvider } from 'react-router-dom';
+import RootLayout from './RootLayout';
+function App() {
+
+  const router = createBrowserRouter([
+    {
+      path : '/',
+      element : <RootLayout />,
+      errorElement : <Error />,
+      children:[ 
+        {path : '/home',element :<Home />,},
+        {path : '/Product',element : <Product />,}
+      ],
+    }
+   
+  ])
+  return <RouterProvider router={router}/>;
+}
+
+export default App;
+
+
+
+RootLayout
+------------
+import { Link ,Outlet } from "react-router-dom";
+const RootLayout = () => {
+    return ( <>
+    
+    <li><Link to = '/home'> Home</Link></li>
+    <li><Link to={"/Product`"}>product Page</Link></li>
+    
+
+
+    <hr />
+    <Outlet />
+    </> );
+}
+ 
+export default RootLayout;
+
+
+{outlet}
+---------
+	it return the children Element from the <App /> 
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Route to link 
+--------------
+	import { Link  } from "react-router-dom";
+	
+	 <Link to={"/Product"}>product Page</Link>
+
+
+different between the "route" to "href"
+----------------------------------------
+	
+
+href 
+-----
+	it reload the whole page to dom again it slow 
+
+<Link> 
+	it navigate to the page without reloading 
+
+----------------------------------------------------------------------------------------------------------
+
+inside the oneForm route throw the button useNavigate()
+
+import { Link ,useNavigate } from "react-router-dom";
+const Home = ()=>{
+
+    const navigate = useNavigate();
+    
+    const navigator =()=> {
+            navigate('/product')
+    }
+
+return(
+    <>
+    
+    <h1>home</h1>
+
+    <button onClick={ navigator}>product page</button>
+    </>
+)
+
+
+}
+
+export default Home;
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+ 
+	

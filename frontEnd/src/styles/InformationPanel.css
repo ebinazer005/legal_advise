@@ -1,0 +1,10 @@
+/* InformationPanel.css */
+.info-table { background:#1e2333; border:1px solid #2a3248; border-radius:10px; padding:20px; }
+
+.info-row {
+  display:flex; justify-content:space-between;
+  padding:10px 0; border-bottom:1px solid #252c3d;
+}
+.info-row:last-child { border-bottom:none; }
+.info-label { font-size:13px; color:#7a8499; }
+.info-value { font-size:13px; color:#c0d0f0; font-weight:500; }
