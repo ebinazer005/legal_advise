@@ -1,4 +1,4 @@
-#uvicorn retrivalPipeline:app --reload
+#uvicorn retrivalPipeline:app --reload --port 8002
 
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -16,7 +16,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -46,16 +46,36 @@ def ask_question(data: QueryRequest):
     retrival = db.as_retriever(search_kwargs={'k':k})
     retrieval_docs = retrival.invoke(query)
 
-    insert_theInput = f"""based on the following document , please aunswer this question : {query}
+    insert_theInput = f"""You are a Legal Advice Assistant.
+    Based on the following legal documents and case law, answer the user's legal question.
+    User Question: {query}
 
-Documents : {chr(10).join(f"-{doc.page_content}" for doc in retrieval_docs)}
+Legal Documents : {chr(10).join(f"-{doc.page_content}" for doc in retrieval_docs)}
 
-Please provide a clear, helpful answer using only the information from these documents. If you can't find the answer in the documents, say "I don't have enough information to answer that question based on the provided documents."
+Instructions:
+1. Provide legal guidance based ONLY on the provided documents.
+2. If relevant, reference previous legal cases or rulings mentioned in the documents.
+3. Explain the legal reasoning clearly and professionally.
+4. Do NOT invent legal facts or cases.
+5. If the documents do not contain enough information, respond with:
+"I don't have enough information from the provided legal documents to answer that question."
+
+Provide the response in a clear legal explanation format.
+
 """
     model = ChatGroq(model="llama-3.1-8b-instant")
 
     message = [
-        SystemMessage(content="you are a helpful assistent."),
+        SystemMessage(content="""You are an experienced Legal Adviser AI specializing in legal research and case analysis.
+
+Your role is to analyze legal documents, previous case rulings, and statutes to provide clear legal explanations.
+
+Always:
+- Base your answer strictly on the provided documents.
+- Reference relevant cases when possible.
+- Provide structured legal reasoning.
+- Avoid speculation or assumptions.
+"""),
         HumanMessage(content=insert_theInput)
     ]
     result = model.invoke(message)

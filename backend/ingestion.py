@@ -56,20 +56,8 @@ def split_documents(documents):
         add_start_index=True
     )
 
-    # print("*"*50)
-    # print(text_splitter)
-    # print("*"*50)
     chunks = text_splitter.split_documents(documents)
 
-
-    # if chunks:
-    #     for i , chunk in enumerate(chunks[:10]):
-    #         print(f"\n--- Chunk {i+1}")
-    #         print(f"Source : {chunk.metadata['source']}")
-    #         print(f"Lenght : {len(chunk.page_content)} characters")
-    #         print("contents")
-    #         print(chunk.page_content)
-    #         print("-" * 50)
 
     return chunks
 

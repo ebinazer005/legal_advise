@@ -1,0 +1,76 @@
+UNITED STATES DISTRICT COURT                        5/3/2023 11: 07 am    
+                                                                     
+EASTERN DISTRICT OF NEW YORK                                              
+                                                 U.S. DISTRICT COURT 
+-------------------------------------------------------------------X      
+                                             EASTERN DISTRICT OF NEW YORK 
+CROSS SOUND CABLE COMPANY, LLC,                                           
+                                                 LONG ISLAND OFFICE  
+
+               Plaintiff,                                            
+
+     -against-                          ORDER                        
+                                        21-CV-2771 (KAM) (ARL)       
+LONG ISLAND LIGHTING COMPANY,                                             
+
+               Defendant.                                            
+---------------------------------------------------------------------X    
+LINDSAY, Magistrate Judge:                                                
+Before the Court, is Plaintiff’s March 31, 2023 letter motion seeking to quash a subpoena 
+issued by Defendant on non-party Hitachi Energy USA Inc. (“Hitachi”)  ECF No. 77.  Plaintiff 
+moves to quash the subpoenas because “[t]he requested discovery apparently has two purposes: 
+(i) to seek information to support its application to compel Mr. Bahrman's deposition, and (2) to 
+inquire into the scope of work that counsel and non-testifying experts did (or did not do) in 
+connection with expert analysis. Neither is a proper basis for discovery.”  Id. at 2.  In response, 
+Defendant contends Plaintiff lacks standing to quash the subpoena and that the information 
+sought by the subpoena is only privileged if third-party Hitachi is aligned with Plaintiff, and that 
+“LIPA is entitled to know if CSC is claiming that communications and documents shared with 
+Hitachi/ABB in the development of the expert report are being claimed as work product because 
+the parties are aligned (calling into question the independence of the CSC’s expert report) or 
+whether those documents are subject to discovery because the privilege has been waived.”  ECF 
+No. 78.                                                                   
+
+ Before a court may resolve a motion to quash a subpoena it must address the "threshold 
+issue" of standing.  Esseily v. Giuliani, 22 F. App'x 77, 78 (2d Cir. 2001) (summary order).  
+"[W]here a party properly moves ... to quash a non-party subpoena, it must establish that it has 
+standing to quash." United States ex rel. Ortiz v. Mount Sinai Hosp., 169 F. Supp. 3d 538, 544-45 
+(S.D.N.Y. 2016).  Rule 45 provides in pertinent part that "a person commanded to produce 
+[documents] may . . . serve . . . a written objection to inspecting . . . any or all of the designated 
+materials." Fed. R. Civ. P. 45(c)(2)(B).  "A plain reading of this provision would suggest that 
+only a person to whom the subpoena is issued may seek to quash the subpoena." In re Rule 45 
+Subpoena Issued to Cablevision Sys. Corp., No. 08-347 (ARR) (MDG), 2010 U.S. Dist. LEXIS 
+40653, 2010 WL 2219343, at * 4 (E.D.N.Y. Feb. 5, 2010).  Thus, a party generally lacks 
+standing to challenge a third-party subpoena, unless the party is seeking to protect a personal 
+right or privilege in the subpoenaed documents. Id.; Langford v. Chrysler Motors Corp., 513 
+F.2d 1121, 1126 (2d Cir. 1975).                                           
+
+Plaintiff has not argued that the documents sought are privileged.  Rather, Plaintiff argues 
+that the discovery sought is beyond the scope of expert discovery.  Thus, Plaintiff lacks standing 
+to object to the non-party subpoenas.1                                    
+
+Accordingly, the motion to quash the subpoena is denied.             
+
+
+
+
+Dated: Central Islip, New York      SO ORDERED:                           
+May 3, 2023                                                          
+
+                              __________/s________________           
+                              ARLENE R. LINDSAY                      
+                              United States Magistrate Judge         
+
+
+
+
+
+
+
+
+
+
+
+
+1 The Court notes that Defendant has also argued that the motion is moot because Hitachi has already produced 
+documents responsive to the subpoena, and that both parties have represented to the Court that discovery has been 
+completed.  See ECF No. 85.                                               

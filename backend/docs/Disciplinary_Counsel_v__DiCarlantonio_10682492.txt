@@ -1,0 +1,631 @@
+              IN THE UNITED STATES DISTRICT COURT                        
+               FOR THE WESTERN DISTRICT OF TEXAS                         
+                     SAN ANTONIO DIVISION                                
+
+UNITED STATES OF AMERICA, EX.   §                                        
+REL.; TIFFANY MONTCRIEFF,       §                                        
+RELATOR; ROBERTA A. MARTINEZ,   §                                        
+RELATOR; AND ALICIA BURNETT,    §                                        
+RELATOR,                        §                                        
+                              Plaintiffs  §                              
+                                §                                        
+v.                              §           SA-17-CV-00317-XR            
+                                §                                        
+PERIPHERAL VASCULAR             §                                        
+ASSOCIATES, P.A.,               §                                        
+                              Defendant.  §                              
+
+                            ORDER                                        
+    On this date, the Court considered Defendant’s (1) motion for finding of fact regarding an 
+omitted element (ECF No. 232), (2) motion to reconsider partial summary judgment on scienter 
+(ECF No. 234), and (3) motion for new trial (ECF No. 247), and the applicable responses (ECF 
+Nos. 232, 242, 249), and replies (ECF Nos. 239, 243, 250) thereto.1 After careful consideration, 
+Defendant’s motions are DENIED.                                           
+                         BACKGROUND                                      
+    This False Claims Act case arises out of the allegedly fraudulent billing practices of 
+Defendant Peripheral Vascular Associates, P.A. (“PVA”), a healthcare provider. Relators filed this 
+action in April 2017 under 31 U.S.C. § 3730(b), which authorizes private persons to sue for 
+violations of the False Claims Act, 31 U.S.C. §§ 3729 et seq. (“FCA”), on behalf of the United 
+States Government. Relators alleged that PVA falsely billed Medicare for services it had not 
+
+    1 In addition, the Court considered the Government’s statement of interest regarding additional post-verdict 
+motions (ECF No. 241) as well as Defendant’s response regarding knowledge of materiality (ECF No. 244). 
+performed. See ECF No. 8.2 After a five-day trial held in February 2022, the jury agreed, awarding 
+$2,728,199 in damages. ECF No. 201.                                       
+    PVA is a full-service vascular surgery practice with multiple locations throughout San 
+Antonio, Texas. ECF No. 123 at 2. Among other services, PVA performs vascular ultrasounds, 
+which have two components relevant to this case: a technical component and a professional 
+
+component.  Id.  In  essence,  the  technical  component  is  performing  the  ultrasound  and  the 
+professional component is a physician analyzing the results. Id.          
+    A healthcare provider can bill Medicare for both the technical and professional components 
+of a vascular study using a “global” Current Procedural Terminology (“CPT”) Code. Id. at 4. When 
+a provider bills for just one component of a study, it must use a two-character “modifier” that 
+signifies that only one component has been performed. Id. As relevant here, a provider can append 
+the “-TC” modifier when billing the technical component only, or the “-26” modifier to bill for the 
+professional component only. Id.                                          
+    PVA uses a program called Allscripts Clinical Module (“Allscripts CM”) as its electronic 
+
+medical records system and a program called Allscripts Practice Management (“APM”) as its 
+billing software. Id. at 5. A patient’s medical record is contained in Allscripts CM. In 2014, PVA 
+adopted an archiving and communications system called MedStreaming. Id. Every vascular study 
+that PVA performs has a MedStreaming report. Id. In their pleadings, Relators alleged, inter alia, 
+that, in 2012, PVA implemented a scheme of too-quick billing designed to increase revenue. Id. at 
+6. Specifically, PVA began billing Medicare for both the professional and technical component 
+before the patient’s status became “Final” in MedStreaming—before the PVA physician had 
+reviewed and interpreted the study and signed the report. Id. Relators alleged three distinct tranches 
+
+
+    2 After investigating the Relators’ allegations for roughly a year, the Department of Justice declined to 
+intervene. See ECF No. 20.                                                
+of claims: (1) the “Testing Only” tranche,3 (2) the “Double Billing” tranche,4 and (3) the “Wrong 
+Provider” tranche.5 ECF No. 221 at 3–4.                                   
+    In August 2020, the parties filed cross-motions for summary judgment. ECF Nos. 94, 95. 
+On December 14, 2020, the Court issued an order resolving the parties’ cross-motions for summary 
+judgment. See United States ex rel. Montcrieff v. Peripheral Vascular Assocs., P.A., 507 F. Supp. 
+
+3d 734, 759–60 (W.D. Tex. 2020). As is relevant here, the Court granted Relators’ motion with 
+respect to the falsity and scienter elements of their claims, concluding that the issues of materiality 
+and damages would be tried to the jury. See id. at 773.                   
+    A five-day trial was held in February 2022. After the close of Relators’ case and then again 
+before submission to the jury, PVA moved for judgment as a matter of law, arguing that, among 
+other things, Relators had not satisfied their burden of proof as to materiality or damages. See ECF 
+Nos. 196, 197. The Court granted the motions in part, concluding that Relators had failed to offer 
+evidence of materiality as to one subset of claims and had failed to present evidence of payments 
+made by the Medicare Advantage and Tricare programs, which have their own rules for payment. 
+Tr. at 660:1–4, 672:3–8.6 The motions were denied in all other respects. ECF No. 199.  
+
+
+
+
+    3 The “Testing Only” tranche includes vascular studies that PVA performed based on referrals from non-
+PVA healthcare providers. When a patient is referred to PVA for a vascular study only, PVA does not perform 
+Evaluation, Management, or Treatment Services (“E/M Services”). For these patients, there are no encounter notes in 
+the patient’s medical record in Allscripts CM. Accordingly, a PVA physician’s interpretations appear only in the 
+MedStreaming reports. Relators assert that PVA billed Medicare before the MedStreaming report was signed. 
+    4 The “Double Billing” tranche contemplates services PVA provided to its own patients. For these patients, 
+PVA physicians would visit with a patient to provide E/M Services and then order a vascular study to be conducted 
+on the same day. Relators argue that PVA failed to generate a MedStreaming report to reflect the PVA physicians’ 
+interpretations of vascular studies. Although PVA argues that the physicians’ interpretations are found in the Allscripts 
+CM E/M Services patient note, Relators assert that the CPT definitions explicitly prohibit billing for both E/M Services 
+and a vascular study without a separate, written report containing the physician’s interpretations. 
+    5 Relators allege that PVA submitted bills to Medicare signed by the wrong “rendering” physician because 
+PVA’s system permitted any PVA physician to review and sign MedStreaming reports, regardless of whether that 
+physician performed the interpretation.                                   
+    6 The Court granted judgment as a matter of law on Relators’ claims in the “Wrong Provider” tranche. 
+    Based on the remaining claims, the jury found that PVA had submitted 7,380 false claims, 
+causing $2,728,199 in damages to the Government. ECF No. 201. Following the verdict, PVA 
+renewed those portions of its previous motions for judgment as a matter of law that were denied 
+by the Court under Federal Rule of Civil Procedure 50(b). ECF No. 208. On January 9, 2023, the 
+Court issued a 32-page order denying in part and granting in part PVA’s renewed motion. United 
+
+States ex rel. Montcrieff v. Peripheral Vascular Assocs., P.A., 649 F. Supp. 3d 404 (W.D. Tex. 
+2023).7 In relevant part, the Court held that the jury’s finding as to materiality was supported by 
+ample evidence at trial. Id. at 414–20. With respect to damages, however, the Court concluded that 
+proper measure of harm to the Government was not the full value of the claim as the jury found, 
+but the interest accrued in the time between the date Government paid the false claims and the date 
+that the claim was determined to be false. Id. at 420–23. At the Court’s direction, id. at 428, the 
+parties subsequently filed joint advisories with proposed models for evaluating damages. See ECF 
+Nos. 222, 230.8                                                           
+    Thereafter, PVA filed three additional post-trial motions requesting (1) a finding of fact 
+
+regarding an allegedly omitted element of Relators’ claim—whether PVA’s knew that its billing 
+practices were material to the Government’s payment decision, ECF No. 232; (2) reconsideration 
+of the Court’s order granting partial summary judgment on scienter—specifically whether the 
+summary judgment record supports pre-2017 knowledge of PVA’s scheme, ECF No. 234; and (3) 
+a new trial to reassess alleged factual issues regarding damages, scienter, and the appropriate 
+number of false claims, ECF No. 247. Relators oppose each motion. The Court addresses each 
+motion in turn.                                                           
+
+
+    7 In this order, the Court also granted Relators’ motion for statutory penalties. Id. 
+    8 Notably, while Relators submitted a damages model based on the facts found by the jury, see ECF No. 222, 
+PVA submitted a damages model based its own version of the facts, see ECF No. 230. 
+                          DISCUSSION                                     
+I.   The Supreme Court’s decision in SuperValu has no bearing on this case. 
+    Because all three of PVA’s motions draw on misinterpretations of the Supreme Court’s 
+recent decision in United States ex rel. Schutte v. SuperValu Inc. (“SuperValu”), 598 U.S. 739, 
+743 (2023), the Court will briefly address the scope and impact of that ruling on the FCA landscape 
+
+at the outset.                                                            
+    FCA liability requires the Government or relators to establish (1) a false statement or 
+fraudulent course of conduct by the defendant; (2) made or carried out with the requisite scienter; 
+(3) that was material; and (4) that caused the government to pay out money or to forfeit moneys 
+due (i.e., that involved a claim). United States ex rel. Longhi v. United States, 575 F.3d 458, 467 
+(5th Cir. 2009).                                                          
+    The Supreme Court’s decision in SuperValu focused on the scienter element—specifically, 
+“[w]hether and when a defendant’s contemporaneous subjective understanding or beliefs about the 
+lawfulness of its conduct are relevant to whether it ‘knowingly’ violated the False Claims Act.” 
+
+See Petition for a Writ of Certiorari at 3, SuperValu, 143 S. Ct. 644 (No. 21-1326). The FCA’s 
+scienter requirement defines “knowing” and “knowingly” to mean that a person has “actual 
+knowledge  of  the  information,”  “acts  in  deliberate  ignorance  of  the  truth  or  falsity  of  the 
+information,” or “acts in reckless disregard of the truth or falsity of the information.” 31 U.S.C. § 
+3729(b)(1)(A).                                                            
+    The SuperValu Court addressed the Seventh Circuit’s extension to FCA cases of the 
+Supreme Court’s decision in Safeco Ins. Co. of America v. Burr, 551 U.S. 47 (2007)—a case 
+interpreting the term “willfully” under the Fair Credit Reporting Act. SuperValu, 598 U.S. at 748. 
+In relevant part, the Seventh Circuit read Safeco to require a two-step scienter inquiry in FCA 
+cases. Id. Under step one of this framework, a court would “ask whether a defendant’s acts were 
+consistent with any objectively reasonable interpretation of the relevant law that had not been ruled 
+out by definitive legal authority or guidance.” Step one, however, ignored whether the defendant 
+believed that interpretation at the time of its claims. Id. If a defendant’s act was not consistent with 
+any objectively reasonable interpretation, then a court would proceed to step two. Id. Only under 
+
+step two would a court then consider a defendant’s subjective thoughts. Id. Put simply, the Seventh 
+Circuit’s framework required that a defendant’s acts be objectively unreasonable before moving 
+to any consideration of whether the defendant knowingly submitted a false claim. Id.  
+    SuperValu rejected the Seventh Circuit’s two-step framework. To begin, the Seventh 
+Circuit’s approach allowed post-hoc reasonable interpretations of the applicable law to provide a 
+safe  harbor for defendants  who submitted claims  with  knowledge of  their falsity.  Id. This 
+framework incorrectly shifted the focus of the scienter inquiry in FCA cases—what matters is 
+“what the defendant thought when submitting the false claim—not what the defendant may have 
+thought after submitting it.” Id. at 752 (emphasis in original). In rejecting the Seventh Circuit’s 
+
+approach, SuperValu expounded a common-sense rule—what matters is a defendant’s knowledge 
+and subjective beliefs when it submits the claim, not what an objectively reasonable person thought 
+upon submitting a claim or what a defendant may have thought in retrospect. Id. at 750.  
+    But  SuperValu  did  not  hold  that  a  defendant  could  consciously  disregard  facts  and 
+circumstances available at the time of claim submission to avoid FCA liability. See id. at 749–58. 
+Tellingly, the Supreme Court clarified that FCA liability is not cabined to those with “actual 
+knowledge” that their claims are false. Id. at 751. It also covers those “who are aware of a 
+substantial risk that their statements are false, but intentionally avoid taking steps to confirm the 
+statement's truth or falsity,” as well as those who are “conscious of a substantial and unjustifiable 
+risk that their claims are false, but submit the claims anyway.” Id. Moreover, the Supreme Court 
+expressly did not foreclose the application of an objective form of recklessness in FCA cases. Id. 
+at 751 n.5. That is, “[i]n some civil contexts, a defendant may be called ‘reckless’ for acting in the 
+face of an unjustifiably high risk of illegality that was so obvious that it should have been known, 
+even if the defendant was not actually conscious of that risk.” Id.9      
+
+II.  Motion for Finding of Fact Regarding Omitted Element (ECF No. 232)   
+      a.  Legal Standard                                                 
+    Under Federal Rule of Civil Procedure 49, a court may make a finding of fact on any issue 
+of fact that was not submitted to the jury. FED. R. CIV. P. 49(a)(3); see also Graphic Prod. Distribs., 
+Inc. v. ITEK Corp., 717 F.2d 1560, 1569 (11th Cir. 1983). “If the court makes no finding, it is 
+considered to have made a finding consistent with its judgment on the special verdict.” Id.  
+      b.  Analysis                                                       
+    PVA argues that the Court should make a finding of fact under Rule 49(a)(3) regarding an 
+allegedly omitted element of Relators’ FCA claim: whether PVA knew that its submissions were 
+
+material to the Government’s payment decision. The Fifth Circuit does not require an FCA 
+claimant to show “knowledge of materiality.” See Longhi, 575 F.3d at 467. Nonetheless, PVA asks 
+the Court to recognize “knowledge of materiality” as a new element based on the Supreme Court’s 
+decisions in Universal Health Servs., Inc. v. United States ex rel. Escobar (“Escobar”), 579 U.S. 
+176 (2016) and SuperValu, 598 U.S. 739, for the reasons stated below, the Court declines to do so. 
+     The FCA defines “material” as “having a natural tendency to influence, or be capable of 
+influencing, the payment or receipt of money or property.” 31 U.S.C. § 3729(b)(4). For materiality, 
+
+
+    9 Notably, PVA advanced the same approach rejected by SuperValu in its response to Relators’ motion for 
+summary judgment. ECF No. 112 at 15. There, the Court declined PVA’s invitation, noting that “[f]or an interpretation 
+to be reasonable, it must actually be held.” ECF No. 123 at 51–52.        
+the FCA requires “proof only that the defendant’s false statements could have influenced the 
+government’s pay decision or had the potential to influence the government’s decision, not that 
+the false statements actually did so.” United States ex rel. Harman v. Trinity Indus. Inc., 872 F.3d 
+645, 661 (5th Cir. 2017).                                                 
+    Under the Supreme Court’s decision in Escobar, “a matter is material” if: (1) a reasonable 
+
+person would attach importance to it in determining a “choice of action,” or (2) “the defendant 
+knew or had reason to know that the recipient of the representation attaches importance to the 
+specific matter in determining his choice of action,” whether or not a reasonable person would do 
+so. See Escobar, 579 U.S. at 192 (internal quotation marks and citation omitted).  Escobar 
+identified several factors that are relevant to, but not automatically dispositive of, the materiality 
+inquiry: whether the government has designated “compliance with a particular . . . requirement as 
+a condition of payment,” id. at 194; whether the violation of that requirement goes to the “essence 
+of the bargain,” id. at 193 n.5 (internal quotation marks omitted); whether the violation is “minor 
+or insubstantial,” id. at 194; and whether the government has taken action when it had actual 
+
+knowledge of similar violations,  id. at  195. “[P]roof of materiality  can include,  but  is  not 
+necessarily limited to, evidence that the defendant knows that the Government consistently refuses 
+to pay claims in the mine run of cases based on noncompliance with the . . . requirement” at issue. 
+Id. at 194–95 (emphasis added).                                           
+    Determining whether a violation is minor or insubstantial also appears to be a matter of 
+common sense. In Escobar, the Supreme Court clarified that a condition can be material even 
+where the Government does not expressly identify it as a condition of payment. Id. at 191 (noting 
+that, even “if the Government failed to specify that the guns it orders must actually shoot . . . a 
+reasonable person would understand the imperative of a functioning firearm”). On the other hand, 
+even an express condition may be immaterial. For example, “[i]f the Government contracts for 
+health services and adds a requirement that contractors buy American-made staplers, anyone who 
+submits a claim for those services but fails to disclose its use of foreign staplers violates the False 
+Claims Act.” Id. at 195. If the Government regularly pays the service provider’s claims, even 
+knowing that foreign-made staplers were used, that is “strong evidence” that the condition that the 
+
+contractor must use American-made staplers is not material. Id.           
+    While PVA makes much of the Supreme Court’s analysis in SuperValu, as discussed 
+above, that case addressed the proper standard of knowledge under the scienter element, not the 
+FCA’s materiality element. 598 U.S. at 743. SuperValu acknowledges that materiality and scienter 
+are two separate requirements; it does not add a new element—knowledge of materiality—to 
+claims under the FCA. See Longhi, 575 F.3d at 467. Post-Escobar, the Fifth Circuit still requires 
+“proof only that the defendant’s false statements could have influenced the government’s pay 
+decision or had the potential to influence the government’s decision, not that the false statements 
+actually did so.” Harman, 872 F.3d at 661 (emphasis added). SuperValu did nothing to disturb that 
+
+standard.                                                                 
+    As this Court has previously explained, a defendant’s subjective knowledge of materiality 
+may be sufficient, but is not necessary, to establish materiality under the FCA. See United States 
+ex rel. Hueseman v. Pro. Compounding Centers of Am., Inc., 664 F. Supp. 3d 722, 747 (W.D. Tex. 
+2023). A defendant’s actual, subjective understanding of materiality is only necessary when the 
+Government attaches unreasonable importance to a misrepresentation that a reasonable person 
+would consider immaterial. See Escobar, 579 U.S. at 192. Otherwise, a matter may be “material” 
+if a reasonable person would attach importance to it in determining a choice of action, regardless 
+of the defendant’s subjective beliefs about matter. Id.                   
+    The FCA does not require that defendants have knowledge that their misrepresentations to 
+the Government are material. To the extent that a scienter requirement applies to materiality—and 
+not just falsity—it is built into the materiality analysis through the “reasonable person” standard. 
+Indeed, Escobar itself forecloses PVA’s argument in its discussion of implied conditions of 
+payment:                                                                  
+
+    [B]ecause  a  reasonable  person  would  realize  the  imperative  of  a  functioning 
+    firearm, a defendant’s failure to appreciate the materiality of that condition would 
+    amount to “deliberate ignorance” or ‘reckless disregard’ of the ‘truth or falsity of 
+    the information’ even if the Government did not spell this out.      
+
+Id. at 191. Escobar counsels that the materiality inquiry is holistic and largely objective in nature. 
+Id. at 192–94; see also United States ex rel. Lemon v. Nurses To Go, Inc., 924 F.3d 155, 161 (5th Cir. 
+2019) (“No one factor is dispositive, and our inquiry is holistic.”).     
+    Here, the jury concluded that the PVA’s false statements were material. The jury’s finding 
+was supported by the evidence at trial. It is also supported by the kind of common-sense analysis 
+contemplated under Escobar. Just as “a reasonable person would realize the imperative of a 
+functioning firearm,” a reasonable person would not pay for services that had not been rendered 
+absent an agreement to prospective payment. Escobar, 579 U.S. at 191.10   
+    Accordingly, the Court declines to recognize a new fifth element for liability under the 
+FCA and thus will not make a finding of fact regarding an allegedly omitted element.  
+ III.  Motion for Reconsideration of Partial Summary Judgment (ECF No. 234) 
+      a.  Legal Standard                                                 
+    “[T]he Federal Rules of Civil Procedure do not provide for a motion for reconsideration.” 
+Shepherd v. Int’l Paper Co., 372 F.3d 326, 328 n.1 (5th Cir. 2004). Nonetheless, the Fifth Circuit 
+
+    10 In addition, to the extent that PVA suggests that reliance is also a requisite element for FCA liability, Fifth 
+Circuit case law counsels otherwise. United States ex rel. Grubbs v. Kanneganti, 565 F.3d 180, 189 (5th Cir. 2009) 
+(“The False Claims Act, in contrast, lacks the elements of reliance and damages.”). 
+has considered motions to reconsider final judgments under Rule 59(e) and 60(b). FED. R. CIV. P. 
+59(e) (allowing a court “to prevent a manifest injustice” by altering or amending a judgment upon 
+a  timely  motion);  FED.  R.  CIV.  P.  60(b)  (allowing  a  court  to  “relieve  a  party  or  its  legal 
+representative from a final judgment, order, or proceeding” for “any . . . reason that justifies 
+relief”); see Doe v. Bridge City Indep. Sch. Dist., No. 20-40596, 2021 WL 4900296 at *1 (5th Cir. 
+
+2021) (Where appellants did not identify the rule by which they sought reconsideration, the court 
+had discretion to analyze the motion under Rule 59(e) as a motion to alter or amend the judgment 
+or under Rule 60(b) as a motion for relief from a judgment or order). Application of Rules 59(e) 
+and 60(b) requires entry of a final judgment, however, and the Court has yet to issue a final 
+judgment in this case, given the parties’ numerous post-trial motions.    
+    A court can revisit an interlocutory order, including an order on partial summary judgment, 
+pursuant to Rule 54(b). See FED. R. CIV. P. 54(b) (“[A]ny order or other decision, however 
+designated, that adjudicates fewer than all the claims or the rights and liabilities of fewer than all 
+the parties does not end the action as to any of the claims or parties and may be revised at any time 
+
+before  the  entry  of  a  judgment  adjudicating  all  the  claims  and  all  the  parties’  rights  and 
+liabilities.”); Lavespere v. Niagara Mach. & Tool Works, Inc., 910 F.2d 167, 185 (5th Cir. 1990) 
+(“[B]ecause the denial of a motion for summary judgment is an interlocutory order, the trial court 
+is free to reconsider and reverse its decision for any reason it deems sufficient, even in the absence 
+of new evidence or an intervening change in or clarification of the substantive law.”), abrogated 
+on other grounds by Little v. Liquid Air Corp., 37 F.3d 1069 (5th Cir. 1994). Indeed, the Court 
+“possesses the inherent procedural power to reconsider, rescind, or modify an interlocutory order 
+for cause seen by it to be sufficient.” Melancon v. Texaco, Inc., 659 F.2d 551, 553 (5th Cir. 1981).  
+    “Although the precise standard for evaluating a motion to reconsider under Rule 54(b) is 
+unclear, whether to grant such a motion rests within the discretion of the court.” Dos Santos v. Bell 
+Helicopter Textron, Inc. Dist., 651 F. Supp. 2d 550, 553 (N.D. Tex. 2009). The standard would 
+appear to be less exacting than that used in evaluating motions under Rule 59(e) or Rule 60(b). See 
+James v. Sadler, 909 F.2d 834, 836 (5th Cir.1990) (“The policy interests underlying Rules 59 and 
+
+60, securing the finality of judgments, were not implicated in this case because the action was still 
+proceeding against other defendants in the district court.”). Still, the standards under Rule 59 and 
+Rule 60 will inform the Court’s analysis. Vladmir Ltd. v. Pac. Parts Supply Co., No. CIV.A.SA-
+08-CV-819XR, 2009 WL 4110288, at *2 (W.D. Tex. Nov. 20, 2009). In particular, the Court 
+considers whether the movant is simply pursuing its old arguments or improperly raising new 
+arguments that should have been made earlier without any justification. Id.; Simon v. United States, 
+891 F.2d 1154, 1159 (5th Cir. 1990) (a Rule 59(e) motion “cannot be used to raise arguments 
+which could, and should, have been made before the judgment issues”); Exxon Shipping Co. v. 
+Baker, 554 U.S. 471, 485 n.5 (2008) (Rule 59(e) cannot be used to “relitigate old matters” that 
+
+have already been resolved).                                              
+      b.  Analysis                                                       
+    In its motion, PVA contends Relators’ claims fail under SuperValu because they did not 
+submit conclusive evidence with their motion for summary judgment, or at trial, that PVA had any 
+conscious awareness of the risk that it was submitting false claims before 2017. ECF No. 234 at 
+1–6. In response, Relators assert that PVA’s arguments rely on a misunderstanding of SuperValu, 
+which did not change the law applied by this Court in its summary judgment order. ECF No. 242 
+at 2–3. Relators further assert that they submitted ample evidence that PVA was aware that its pre-
+2017 billing practices were improper, while PVA submitted no evidence to the contrary. Id. at 4. 
+    With respect to the scienter element, the FCA applies to those who “knowingly assist[] in 
+causing the government to pay claims which were grounded in fraud, without regard to whether 
+that person had direct contractual relations with the government.” Peterson v. Weinberger, 508 
+F.2d 45, 52 (5th Cir. 1975). A person acts “knowingly” with respect to information if the person 
+“has actual knowledge of the information,” “acts in deliberate ignorance of the truth or falsity of 
+
+the information,” or “acts in reckless disregard of the truth or falsity of the information.” 31 U.S.C. 
+§ 3729(b); see also SuperValu, 598 U.S. at 749.                           
+    The Supreme Court’s recent decision in SuperValu addressed the evidentiary standard for 
+proving the scienter element, holding that scienter refers to the defendant’s subjective knowledge 
+and beliefs, not what a hypothetical objectively reasonable person might have known or believed. 
+SuperValu, 598 U.S. at 750. In doing so, SuperValu rejected the existence of an “objectively 
+reasonable”  safe  harbor  for  defendants.  Id.  Further,  as  the  United  States  points  out,  “the 
+[SuperValu] court did not limit the type of evidence that the government could use to prove intent, 
+including evidence after claims are presented.” ECF No. 241 at 8 (emphasis added). 
+
+    While PVA implies that SuperValu’s description of the three different mental states listed 
+under 31 U.S.C. § 3729 is somehow groundbreaking, this framework is nothing new. Of course, 
+what matters is the knowledge and subjective beliefs at the time of the claim, as SuperValu makes 
+clear. 598 U.S. at 750. The subjective nature of the inquiry, however, does not cabin FCA liability 
+only to those who have actual knowledge that their claims are false, despite PVA’s apparent 
+argument to the contrary. See id. at 752 (“What typically matters at common law is whether the 
+defendant made the false statement ‘without belief in its truth or recklessly, careless of whether it 
+is true or false.’” (quoting Restatement (Second) of Torts § 526, Comment e)). Even more, the 
+Court  in  SuperValu  explicitly  declined  foreclose  the  application  of  an  objective  form  of 
+recklessness to FCA liability. Id. at 751 n.5.11 Read faithfully, nothing in SuperValu suggests that 
+a defendant can bury its head in the sand and avoid FCA liability in the face of overwhelming 
+evidence that its submissions to the Government contained false statements. United States ex rel. 
+Drummond v. BestCare Lab. Servs., L.L.C., 950 F.3d 277, 282-83 (5th Cir. 2020); see also United 
+States v. Bourseau, 531 F.3d 1159, 1168 (9th Cir. 2008). Simply put, SuperValu does not alter the 
+
+Court’s summary judgment analysis.                                        
+    Next, PVA challenges the evidentiary support for the Court’s summary judgment ruling on 
+scienter. According to PVA, there is “no conclusive evidence in the record as to PVA’s state of 
+mind prior to the 2017 compliance billing email and notes,” and “no evidence at all that before 2017, 
+PVA knew that signed stand-alone reports were somehow required.” ECF No. 234 at 4.  
+    PVA’s arguments are largely beside the point because they disregard much of the evidence 
+considered. The Court did not rely exclusively on the 2017 compliance billing email and notes in 
+reaching its conclusion on scienter; instead, it considered evidence spanning from 2012 through 2017 
+along with “widespread industry publications” that were “strong evidence that PVA recklessly 
+disregarded industry practice.” ECF No. 123 at 48–53 & n.2. The question here is not whether PVA 
+knew that a stand-alone report was required prior to the submission of a claim to Medicare. Rather, the 
+question is whether PVA knew when it submitted the claims in the “Double Billing” tranche that the 
+claims falsely represented to the Government that both components of a study had been performed, or 
+
+
+
+    11 In relevant part, the Supreme Court noted:                        
+
+      In some civil contexts, a defendant may be called “reckless” for acting in the face of an 
+      unjustifiably high risk of illegality that was so obvious that it should have been known, even 
+      if the defendant was not actually conscious of that risk. We need not consider how (or 
+      whether) that objective form of “recklessness” relates to the FCA today because, as noted 
+      above, it is enough to say that the FCA’s standards can be satisfied by a defendant's 
+      subjective awareness of the claim’s falsity or an unjustifiable risk of such falsity. 
+
+Id. at 751 n.5 (citations omitted).                                       
+acted in “deliberate ignorance” or “reckless disregard” as to the falsity of that representation. See 
+SuperValu, 598 U.S. at 750; ECF No. 123 at 36–43; 51–52.                  
+    In short, SuperValu does not alter this Court’s analysis, and the Court declines to accept 
+PVA’s invitation to reconsider its order granting partial summary judgment.  
+ IV.  Motion for a New Trial                                             
+      a.  Legal Standard                                                 
+
+    The Court may grant a new trial “for any reason for which a new trial has heretofore been 
+granted in an action at law in federal court.” FED. R. CIV. P. 59(a). A court may not “substitute its 
+opinion for the jury’s,” but “[i]f the trial judge is not satisfied with the verdict of a jury, he has the 
+right—and indeed the duty—to set the verdict aside and order a new trial.” Smith v. Transworld 
+Drilling Co., 773 F.2d 610, 613 (5th Cir. 1985) (citations omitted).      
+      b.  Analysis                                                       
+    According to PVA, a new trial is warranted to reassess three separate issues: (1) scienter, 
+(2) the number of false claims, and (3) damages. ECF No. 247 at 2. First, PVA reasserts the scienter 
+arguments made in its motion for reconsideration and now rejected by the Court. Id. at 3–4. 
+
+Second, PVA argues that the Court must grant a new trial to accurately determine the number of 
+false claims because Relators improperly measured the number of false claims and relied only on 
+an expert opinion that should have been excluded. Id. at 4–9. Third, PVA contends that Relators 
+cannot support any damages finding at this stage because the Court lacks the authority to adopt an 
+interest-based model of damages. Id. at 3. For the reasons addressed below, Relators argue, and 
+the Court agrees, no new trial is needed to reassess any of these issues. ECF No. 249 at 3–7. 
+            i.  Scienter                                                 
+    The Court declines to entertain PVA’s scienter arguments for a third time. The Court finds 
+no reason to disturb its order granting summary judgment as to scienter (ECF No. 123) and will 
+not order a new trial on that basis.                                      
+           ii.  Number of Claims                                         
+
+    Next, PVA argues that this Court should order a new trial to properly assess the number of 
+false claims submitted by PVA. First, PVA takes issue with the number of claims found by the 
+jury for the “Double Billing” tranche to the extent that the verdict was based on Dr. Nye’s 
+testimony. ECF No. 247 at 4–5. According to PVA, Dr. Zachary Nye testified only to the total 
+number of “Double Billing” false claims in the aggregate for the Medicare Part B, Medicare 
+Railroad, and Advantage Plans, without any breaking down the claims by payor. Id. PVA further 
+asserts the Dr. Nye’s opinions were “based on irrelevant and inadmissible data beyond the FCA 
+and result in an overinclusive representation that, even if accurate, would inflate the totals and 
+prejudice PVA.” Id. at 5 (quoting ECF No. 86 at 8). In turn, PVA contends that these flaws in Dr. 
+
+Nye’s testimony ultimately led to Realtors’ counsel suggesting there were 4,650 unique patient 
+visits as a measure of the total number of false claims during closing arguments without adequate 
+support. Id. Second, PVA argues that the Court should have excluded Dr. Nye’s testimony 
+altogether, as he failed to properly calculate PVA’s by counting unique patient visits rather than 
+batched Form 1500 submissions to Medicare. Id. at 5–9.                    
+    In response, Realtors contend that neither argument warrants a new trial. First, Relators 
+point out that, while Dr. Nye did not break down the unique patient visit count after the Court 
+granted judgment for PVA as to federal payors other than Medicare Part B, the Relators presented 
+a conservative figure of 4,650 false claims during closing argument. ECF No. 249 at 5–7. Second, 
+Relators contend that PVA ultimately agreed to the Court’s modified jury instruction that defined 
+claims as equivalent to unique patient visits. Id. at 7–8 (citing Tr. 712:23–713:5).  
+    PVA simply has not demonstrated the need for a new trial to reassess the precise number 
+of “Double Billing” false claims. Here, PVA primarily contends that “Dr. Nye incorrectly tallied 
+the number of false claims, requiring a new trial where the numbers can be accurately determined,” 
+
+and that the Court should in effect reconsider its ruling on PVA’s motion to exclude Dr. Nye’s 
+allegedly “unreliable” and “inadmissible” testimony. ECF No. 247 at 2, 4–5; ECF No. 250 at 5–8.  
+    In its motion to exclude Dr. Nye’s testimony, PVA contended that his analysis was 
+irrelevant and unreliable because it relied on data that allegedly did not distinguish between the 
+technical and professional component of a global claim and may have included claims submitted 
+to private payors, resulting in an artificially inflated number of claims. ECF No. 86 at 6–8. The 
+Court denied the motion, noting that PVA’s “argument [went] to the weight of Dr. Nye’s opinion, 
+and [was] not grounds for exclusion. . . . PVA’s concerns [were] properly addressed on cross-
+examination or the presentation of refuting evidence.” ECF No. 123 at 27–28. However, now, 
+
+PVA asserts two different arguments that are at best only tangentially related to those made in its 
+admissibility challenge—that Dr. Nye (1) failed to present a specific number of “Double Billing” 
+false claims submitted to Medicare Part B, and (2) applied the wrong measure when assessing the 
+number of false claims submitted by PVA. To the extent that PVA seeks to have the Court revisit 
+its admission of Dr. Nye’s testimony on a basis not furthered in its motion to exclude Dr. Nye’s 
+testimony, the Court declines to do so.                                   
+    Even so, to the extent that PVA seeks a new trial on the basis that the precise number of 
+Medicare Part B false claims was not directly presented to the jury, the Court declines this request. 
+At this stage, PVA’s “burden is . . . to show that there is no evidence to support the jury’s verdict.” 
+Sierra v. Dorel Juv. Grp., 663 F. App’x 307, 310 (5th Cir. 2016) (citing Whitehead, 163 F.3d at 
+269). Indeed, upon this Court’s review of the record, there is evidence to support the jury verdict. 
+Here, Dr. Nye testified to the total number of false claims submitted for the “Double Billing” 
+tranche, and Relators put before the jury the data upon which that opinion was based. Tr. at 467:2–
+19; Pls.’ Exs. 88, 116. While the Court later granted a directed verdict as to a portion of the “Double 
+
+Billing” false claims, the jury was entitled to rely upon Dr. Nye’s testimony and the accompanying 
+data in arriving at the ultimate number of “Double Billing” false claims submitted.12  
+    Second, PVA’s next argument—that Dr. Nye improperly measured the number of claims 
+using unique patient visits rather than counting batched Form 1500 submissions—fairs the same. 
+To begin, as Relators point out, PVA’s trial counsel agreed to the Court’s modified jury instruction 
+allowing unique patient visits as a measurement of claims. See ECF No. 249 at 7–8.13 Notably, 
+this was done at the request of PVA after it objected to the original proposed jury charge. Tr. at 
+711:16–713:4. Though PVA did later object to the Court’s charge, PVA only offered a formulaic 
+objection lacking any specificity and taking issue with the new charge only to the extent that it 
+
+differed with PVA’s originally requested jury charge. Tr. at 715:20–716:12. Thus, this specific 
+issue had been resolved upon submission to the jury. See id. It is simply too late for PVA to change 
+its position. See Health All. Network, Inc. v. Cont’l Cas. Co., 245 F.R.D. 121, 127 (S.D.N.Y. 2007), 
+aff’d, 294 F. App’x 680 (2d Cir. 2008).                                   
+    In addition, PVA’s own case law contradicts PVA’s position that the proper measure of 
+claims is the number of batched Form 1500 submissions, rather than unique patient visits or the 
+
+
+    12 In addition, it is not clear whether PVA intends to advance this argument as an independent basis for a new 
+trial or simply as a part of a last-ditch effort to challenge the admissibility of Dr. Nye’s testimony. See ECF No. 247. 
+    13 After receiving input from both parties, the Court and the parties ultimately settled on the following 
+language to present to the jury: “In determining the number of false claims, if any, you should consider each unique 
+patient visit reflected on the Form 1500, or electronic equivalent, not the number of CPT codes on a claim.” Tr. at 
+712:24–713:4.                                                             
+associated individual Form 1500 submissions. See ECF No. 247 at 6–7. Though PVA cites to 
+United States v. Krizek to flesh out its view of the Supreme Court’s Bornstein decision, the D.C. 
+Circuit in Krizek addressed nearly the same question PVA now presses before this Court—what is 
+the proper measure of claims in Medicare FCA cases? 111 F.3d 934, 940 (D.C. Cir. 1997). In 
+answering this question, Court in Krizek held that “the ‘claim’ in this context is the HCFA 1500 
+
+form.” Id. at 943. Indeed, because Form 1500 is patient-specific, see Pls.’ Ex. 35, the number of 
+unique patient visits appears to be a sufficient proxy to allow a jury to measure the number of 
+claims here with a reasonable certainty—a point that PVA conceded at trial. See Tr. at 712:24–
+713:4, Waldmann v. Fulp, 259 F. Supp. 3d 579, 610 (S.D. Tex. 2016) (“Relators have presented 
+sufficient evidence for a jury to determine how many false claims were actually presented with 
+reasonable certainty.”). Accordingly, the Court will not order a new trial to reassess the number of 
+claims issue.                                                             
+           iii.  Interest-Based Damages                                  
+    PVA further contends that the Court lacks authority to impose a new measure of damages 
+
+at this late stage or enter a remittitur and must instead order a new trial. ECF No. 247 at 3; ECF 
+No. 250 at 3–4. According to PVA, Relators failed to submit evidence of a legally viable damages 
+theory, and the Court’s rejection of Relators’ damages calculation requires that it order a new trial 
+to properly reassess the issue. Id. The Court disagrees.                  
+                1.  New Trial or Remittitur?                             
+    Although a court cannot “substitute its own opinion for the jury’s,” a court may remit the 
+damages award as a matter of law where the precise determination of damages depends on the 
+application of legal rules and there are no fact issues left for the jury to decide. See In re Lorazepam 
+& Clorazepate Antitrust Litig., 261 F. Supp. 3d 14, 19 (D.D.C. 2017); see also United States ex 
+rel. Feldman v. van Gorp, 697 F.3d 78, 92 (2d Cir. 2012) (“We conclude, however, that here, 
+where the question is not the benefit of the bargain between the plaintiff and the defendants, and 
+the amount of each payment for which liability has been assessed is not in dispute, no further 
+finding of fact as to the amount of the damages was necessary.”). This proposition logically flows 
+from the general rule that the proper measure of damages is a question of law, not a question of 
+
+fact. See TODCO Americas, Inc. v. El Paso oLeo E Gas Do Brasil, Ltda., No. CV H-08-1832, 
+2009 WL 10697535, at *4 (S.D. Tex. July 17, 2009); Ronaldo Designer Jewelry, Inc. v. Cox, No. 
+1:17-CV-2-DMB-DAS, 2020 WL 1124599, at *5 (N.D. Miss. Mar. 6, 2020). For example, a court 
+can reduce damages where “it is apparent as a matter of law that certain identifiable sums included 
+in the verdict should not have been there.” CHARLES A. WRIGHT & ARTHUR R. MILLER, 11 FED. 
+PRAC. & PROC. CIV. § 2815 (3d ed.); see also Akey v. Placer Cnty., No. 2:14-CV-02402-KJM-DB, 
+2019 WL 5102241, at *4 (E.D. Cal. Oct. 11, 2019). The Court is faced with such a situation here.  
+    As the Court explained in its order on PVA’s renewed motion for judgment as a matter of 
+law, it cannot ignore “the fact that the services for which PVA submitted claims were actually 
+
+performed in every case.” ECF No. 221 at 22. Thus, the Court held as a matter of law that the 
+Government was entitled to an interest-based measure of damages. Id. at 24–25. The Court directed 
+the parties to submit additional briefing on the question of damages because, “given PVA’s failure 
+to rebut Dr. Nye’s testimony at trial or to present a workable interest model in its post-trial 
+briefing,” the Court had insufficient information from which to calculate damages at the time. ECF 
+No. 221 at 25.                                                            
+    Outside of its calculation of final damages, the jury’s remaining findings were left intact. 
+See id.; ECF No. 201. PVA insists, however, that in order to revisit the proper calculation of the 
+Government’s damages, the Court must set aside the jury’s findings and hold a new trial. ECF No. 
+250 at 3. PVA simply ignores the status of this case: there are no fact issues left for a jury to 
+resolve.                                                                  
+    Other courts have faced similar post-trial quandaries where the calculation of damages was 
+straightforward given the jury’s resolution of the fact issues and rooted in the same evidence relied 
+on at trial. See In re Lorazepam & Clorazepate Antitrust Litig., 261 F. Supp. 3d 14, 17 (D.D.C. 
+
+2017). For example, in Lorazepam, after multiple plaintiffs were dismissed on appeal, the trial 
+court relied on post-trial expert calculations in entering a remittitur to calculate damages for the 
+remaining plaintiffs, even though the damages had been presented “in the aggregate” at trial. Id. 
+at 18–19. The defendants sought to reopen discovery and hold a new trial on damages. Id. The 
+court, however, noted that the jury had resolved all fact issues in rendering its verdict and the 
+defendants had failed to identify any flaws in the expert’s post-trial calculation’s methodology. Id. 
+at 19. Thus, there were simply “no facts in dispute or evidence to be weighed.” Id. at 18–19. 
+    Similarly here, PVA purportedly seeks a new trial on damages. See ECF No. 201; ECF No. 
+222 at 6–9; ECF No. 247 at 3; see generally ECF No. 230. PVA’s briefing, however, amounts to 
+
+yet another attempt to relitigate its liability and merely confirms that the reassessment of damages 
+does not present a question for the jury. Tellingly, PVA spends the entirety of its post-trial damages 
+briefing attacking the number of claims found by the jury rather than attacking the Relators’ 
+updated damages calculation based on the jury’s findings. See ECF No. 222 at 6–9; ECF No. 230. 
+And in response to the Court’s requests for briefing on the proper calculation of damages, PVA 
+has repeatedly recycled arguments that have already been rejected by the Court, premised not on 
+the jury’s findings but on the facts it wishes the jury had found. See ECF No. 222 at 6–9; see 
+generally ECF No. 230. Much like the defendants in Lorazepam, PVA fails to challenge the 
+methodology of Dr. Nye’s post-trial calculations in either its post-trial damages briefing or its 
+motion for a new trial, taking issue instead with the number of claims found by the jury. See ECF 
+Nos. 222, 230.                                                            
+    Thus, the parties’ briefing confirms that the jury’s findings are sufficient to allow the Court 
+to accurately remit damages based on an interest-based theory of damages. In addition, although 
+Relators did not cite specific trial evidence in support of Dr. Nye’s calculations, the Court is 
+
+satisfied that it can rely on them in entering a remittitur because his figures were produced using 
+“PVA’s datasets on which all of his prior work was based.” ECF No. 222 at 5. Because the 
+resolution of the damages issues is simply a matter of law and the updated calculation will be 
+rooted in the same data that was presented at trial, the Court concludes that it can properly enter a 
+remittitur as a matter of law in lieu of granting a new trial.            
+                2.  Applicable Interest Rate                             
+    Before entering remittitur, the Court must resolve one remaining question of law: the 
+appropriate interest rate. Relators propose that the Court use the interest rate for overpayments and 
+underpayments to Medicare providers published by the Secretary of Treasury and Centers for 
+
+Medicare and Medicaid Services (“CMS interest rate”), which was, as of the date of the jury’s 
+verdict, 9.125%. ECF No. 222. PVA urges the Court to apply the federal post-judgment interest 
+rate in effect on the date of the jury’s verdict, 1.08%. See ECF No. 230. 14  
+    According to Relators, the CMS interest rate adequately measures the time-value of money 
+to the Medicare program. ECF No. 222 at 4. It is commonly used in administrative proceedings 
+related to Medicare overpayments and underpayments as well as in district court proceedings to 
+recover Medicare overpayments. Id. at 2–4 (first citing United States v. GentleTouch Healthcare, 
+
+
+    14 Notably, PVA has continually moved the mark on this point, submitting varying interest rate proposals to 
+the Court in its briefs. See ECF No. 208 at 15 (proposing “the typical Medicare interest rate on overpayments”); ECF 
+No. 222 at 8 (proposing “a U.S. Treasury rate on average of between 1.92%–3.67% since the verdict”); ECF No. 230 
+at 10 (proposing the federal postjudgment interest rate of 1.08% in effect on the date of the jury’s verdict). 
+Inc., No. A-21- CV-725-RP, 2022 WL 3449496, at *3 (W.D. Tex. June 14, 2022); and then United 
+States v. Eshcol Health Care Servs. Inc., No. 3:21-CV-2280-S-BH, 2022 WL 4227533, at *1 (N.D. 
+Tex. Aug. 22, 2022), report and recommendation adopted, No. 3:21- CV-2280-S, 2022 WL 
+4227521 (N.D. Tex. Sept. 13, 2022)). PVA objects that the CMS interest rate is inapplicable 
+because the Government did not make any overpayments—PVA contends that it performed the 
+
+services at the center of the disputed claims. See ECF No. 230 at 10.     
+    The Court finds Relators’ rationale far more persuasive—the CM intertest rate is the 
+interest rate that properly measures the value of money to the Medicare program. Further, PVA’s 
+argument that there were no overpayments yet again misses the point. While the services for which 
+it billed Medicare were ultimately performed, those services were performed after PVA submitted 
+its requests for payment. And as the Court already recognized: “payment today is not the same as 
+payment tomorrow.” ECF No. 221 at 23 (citing In re Murel Holding Corp., 75 F.2d 941, 942 (2d 
+Cir. 1935)). Accounting for the time-value of money, the government did overpay for PVA’s 
+services. Thus, the Court concludes that it can properly adjust damages here as a matter of law by 
+
+applying the published CMS interest rate in effect on the date of the jury’s verdict. 
+    Accordingly, the Court will not order a new trial to reassess damages. Instead, the Court 
+will enter a remittitur based on the Relators’ proposed measure of interest-based damages and will 
+enter final judgment with damages in the amount of $220,252 for the “Testing Only” tranche and 
+$1,235,127 for the “Double Billing” tranche—resulting in a damages figure of $1,455,379. See 
+ECF No. 222. Trebled, the damages award here amounts to $4,366,137. 31 U.S.C. § 3729(a)(1). 
+                          CONCLUSION                                     
+    For the foregoing reasons, the Court hereby ORDERS that:             
+    PVA’s motion for finding of fact regarding an omitted element (ECF No. 232) is DENIED. 
+      PVA’s motion to reconsider partial  summary judgment on  scienter (ECF No.  234)  is 
+DENIED. 
+      PVA’s motion for new trial (ECF No. 247) is DENIED. 
+      Consistent with an interest-based model of damages, this Court will enter a remittitur as a 
+matter of law for both the “Testing Only” tranche and the “Double Billing” tranche.  A final 
+judgment will issue separately pursuant to Rule 58. 
+      It is so ORDERED. 
+      SIGNED this 30th day of January, 2024. 
+
+                                        an 
+                                    UNITED STATES DISTRICT  JUDGE 
+
+                                      24 
