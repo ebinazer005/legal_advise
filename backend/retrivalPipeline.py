@@ -15,8 +15,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
+    allow_origins=["http://localhost:5173", "*"],
+    # allow_origins=["*"],
+    allow_credentials=True,
+    # allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -27,6 +29,7 @@ embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 db = Chroma(
     persist_directory=persist_directory,
     embedding_function=embedding_model,
+    collection_name="langchain",
     collection_metadata={"hnsw:space" : "cosine"}
 )
 
@@ -46,7 +49,7 @@ def ask_question(data: QueryRequest):
     retrival = db.as_retriever(search_kwargs={'k':k})
     retrieval_docs = retrival.invoke(query)
 
-    insert_theInput = f"""You are a Legal Advice Assistant.
+    insert_theInput = f"""You are a Legal Advice Assistant for Ebinazer selvaraj.
     Based on the following legal documents and case law, answer the user's legal question.
     User Question: {query}
 
@@ -66,9 +69,9 @@ Provide the response in a clear legal explanation format.
     model = ChatGroq(model="llama-3.1-8b-instant")
 
     message = [
-        SystemMessage(content="""You are an experienced Legal Adviser AI specializing in legal research and case analysis.
+        SystemMessage(content="""You are an assitent for Ebinazer selvaraj consultancy and experienced Legal Adviser AI specializing in legal research and case analysis.
 
-Your role is to analyze legal documents, previous case rulings, and statutes to provide clear legal explanations.
+Your role is to working for Ebinazer selvaraj consultancy and analyze legal documents, previous case rulings, and statutes to provide clear legal explanations.
 
 Always:
 - Base your answer strictly on the provided documents.

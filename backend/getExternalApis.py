@@ -2,8 +2,9 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel    #pydantic using to get the json api paramitters 
 import requests, os, re, time
+import pymysql
 
 app = FastAPI()  
 
@@ -65,7 +66,7 @@ def ingest_cases(data: SearchRequest):
                     with open(f"docs/{file_name}.txt", "w", encoding="utf-8") as f:
                         f.write(text)
                     downloaded_files.append({"name": f"{file_name}.txt", "type": "TXT"})
-                    processing_log.append({"case": case_name, "status": "✅ Saved"}) 
+                    processing_log.append({"case": case_name, "status": " Saved"}) 
 
                 else:
                     pdf_url = opinion_data.get("download_url")
@@ -96,12 +97,38 @@ def ingest_cases(data: SearchRequest):
             }
 
 
+#dbConnection
+db = pymysql.connect(
+    host="localhost",
+    user="root",
+    password="mysql",
+    database="legalAdviser_RAG"
+)
+
+cursor = db.cursor()
+
+
 @app.delete("/ingest/clear")
 def clear_docs():
     folder = "docs"
     if not os.path.exists(folder):
         return {"message": "No files to delete"}
-    files = os.listdir(folder)
-    for f in files:
-        os.remove(os.path.join(folder, f))
-    return {"message": f"Deleted {len(files)} files successfully"}
+
+    cursor.execute("SELECT file_name FROM documents")
+    manual_files = {row[0] for row in cursor.fetchall()}
+
+    deleted = []
+    skipped = []
+
+    for f in os.listdir(folder):
+        if f in manual_files:
+            skipped.append(f) 
+        else:
+            os.remove(os.path.join(folder, f))
+            deleted.append(f)
+
+    return {
+        "message": f"Deleted {len(deleted)} online files, skipped {len(skipped)} manual uploads",
+        "deleted": deleted,
+        "skipped": skipped
+    }

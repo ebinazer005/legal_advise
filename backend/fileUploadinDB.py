@@ -5,6 +5,7 @@ import pymysql
 from fastapi import FastAPI, UploadFile, File
 from typing import List
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
 import threading
 from langchain_community.document_loaders import TextLoader, PyPDFLoader, Docx2txtLoader
@@ -59,7 +60,7 @@ def load_document(file_path):
     return []
 
 def run_ingestion():
-    print("🔄 Running ingestion pipeline...")
+    print("Running ingestion pipeline...")
     all_docs = []
 
     for file_name in os.listdir(UPLOAD_FOLDER):
@@ -97,19 +98,19 @@ def run_ingestion():
 class DocsWatcher(FileSystemEventHandler):
     def on_created(self, event):
         if not event.is_directory:
-            print(f"📄 New file detected: {event.src_path}")
+            print(f"New file detected: {event.src_path}")
             threading.Timer(1.5, run_ingestion).start()  
 
     def on_deleted(self, event):
         if not event.is_directory:
-            print(f"🗑️ File deleted: {event.src_path}")
+            print(f"File deleted: {event.src_path}")
             threading.Timer(1.5, run_ingestion).start()
 
 # Start watcher on server start ────────────────
 observer = Observer()
 observer.schedule(DocsWatcher(), path=UPLOAD_FOLDER, recursive=False)
 observer.start()
-print("👀 Watching docs folder for changes...")
+print("Watching docs folder for changes...")
 
 @app.post("/upload")
 async def upload_files(files: List[UploadFile] = File(...)):
@@ -149,3 +150,76 @@ def get_files():
         })
 
     return {"files": files}
+
+# for delete manual uploaded file
+class DeleteRequest(BaseModel):
+    file_names: List[str]
+
+@app.delete("/files/delete")
+def delete_files(data: DeleteRequest):
+    deleted = []
+    not_found = []
+
+    for file_name in data.file_names:
+        file_path = os.path.join(UPLOAD_FOLDER, file_name)
+
+       
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            deleted.append(file_name)
+        else:
+            not_found.append(file_name)
+
+        cursor.execute("DELETE FROM documents WHERE file_name = %s", (file_name,))
+        db.commit()
+
+    return {
+        "message": f"Deleted {len(deleted)} files",
+        "deleted": deleted,
+        "not_found": not_found
+    }  
+
+
+# for avoid multiple thread conflict 
+ingestion_lock = threading.Lock()
+
+def run_ingestion():
+    if not ingestion_lock.acquire(blocking=False):
+        print("⚠️ Ingestion already running, skipping...")
+        return
+
+    try:
+        print("🔄 Running ingestion pipeline...")
+        all_docs = []
+
+        for file_name in os.listdir(UPLOAD_FOLDER):
+            file_path = os.path.join(UPLOAD_FOLDER, file_name)
+            if os.path.isdir(file_path):
+                continue
+            docs = load_document(file_path)
+            if docs:
+                all_docs.extend(docs)
+                print(f"  Loaded: {file_name}")
+
+        if not all_docs:
+            print("⚠️ No documents found")
+            return
+
+        splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+        chunks = splitter.split_documents(all_docs)
+
+        new_db = Chroma.from_documents(
+            documents=chunks,
+            embedding=embedding_model,
+            persist_directory=persist_directory,
+            collection_metadata={"hnsw:space": "cosine"},
+            collection_name="langchain"  
+        )
+
+        print(f"Ingestion done — {len(chunks)} chunks indexed")
+
+    except Exception as e:
+        print(f"Ingestion error: {e}")
+
+    finally:
+        ingestion_lock.release()
