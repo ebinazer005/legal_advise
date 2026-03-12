@@ -1,15 +1,15 @@
 import { useState } from "react";
-import TopBar from "../components/TopBar";
+
 import NumberStepper from "../components/NumberStepper";
 import SliderControl from "../components/SliderControl";
 import StatusBadge from "../components/StatusBadge";
 import SourceCard from "../components/SourceCard";
-import { MOCK_RESPONSE, MOCK_SOURCES } from "./constants";
+
 import "../styles/RetrievalPanel.css";
 import axios from "axios";
 
 export default function RetrievalPanel() {
-  const [query, setQuery] = useState("What are the main challenges of deploying ML models?");
+  const [query, setQuery] = useState("Ask any thing about legal questions");
   const [topK, setTopK] = useState(3);
   const [alpha, setAlpha] = useState(0.75);
   const [isLoading, setIsLoading] = useState(false);
@@ -24,7 +24,7 @@ export default function RetrievalPanel() {
     setSources([]);
 
     try {
-      const response = await axios.post("http://localhost:8000/ask", {
+      const response = await axios.post("http://localhost:8002/ask", {
         query: query,
         top_k: topK,
         alpha: alpha
@@ -34,13 +34,15 @@ export default function RetrievalPanel() {
       setResult({
         query: data.query,
         response: data.answer,
-        top_k: data.top_k,      // ✅ store for display
+        top_k: data.top_k,      
         alpha: data.alpha
       });
 
       const formattedSources = data.context.map((c, i) => ({
-        id: i,
-        content: c
+        id: c.id,
+        content: c.content,
+        source: c.source,
+        page: c.page
       }));
 
       setSources(formattedSources);
@@ -59,11 +61,10 @@ export default function RetrievalPanel() {
 
   return (
     <div className="panel retrieval-panel">
-      <TopBar onRefresh={handleReset} />
+    
 
       {/* Header */}
       <div className="panel-title">
-        <span className="panel-title-icon">📥</span>
         <h1>Retrieval</h1>
       </div>
 
