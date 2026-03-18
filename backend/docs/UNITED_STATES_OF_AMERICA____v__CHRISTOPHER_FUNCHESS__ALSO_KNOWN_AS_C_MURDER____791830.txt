@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opinion type="majority">
+<author id="b726-8">
+  MELLOY, Circuit Judge.
+ </author>
+<p id="b726-9">
+  Christopher Funchess appeals his conviction and sentence for crimes related to the distribution of crack cocaine. We affirm in part, reverse in part, and remand for resentencing.
+ </p>
+<p id="b726-10">
+  I.
+ </p>
+<p id="b726-11">
+  The government charged Funchess with three counts for selling or aiding and abetting the sale of crack cocaine. The government alleged that, on October 27 and 28, 2003, Funchess drove a van from which Maurice “Snake” Pennington sold crack cocaine. The total quantity involved was several grams. Prosecutors filed a separate charge against Funchess for conspiring to possess with the intent to deliver fifty grams or more of crack cocaine from 2002 to October 2003. The conspiracy charge alleged that Funchess was involved in a larger conspiracy with Pennington to purchase, transport, and distribute crack cocaine. In another count, the government alleged that, on October 7, 2003, Funchess possessed with intent to distribute crack cocaine. The government dismissed this final count before trial.
+ </p>
+<p id="b726-13">
+  The government filed a notice of intent to seek an enhanced mandatory minimum sentence for the conspiracy charge because Funchess had a prior felony drug conviction. Funchess filed objections to the penalty enhancement notice.
+ </p>
+<p id="b726-14">
+  A jury found Funchess guilty of all four counts that went to trial. At the sentencing hearing, the district court made several findings regarding facts that were not decided by the jury beyond a reasonable doubt. Specifically, the district court found that the conspiracy offense involved more than two kilograms of crack cocaine and that Funchess possessed a firearm in connection with the conspiracy. The district court sentenced him to 324 months in prison. The sentencing occurred after the Supreme Court’s decision in
+  <em>
+   Blakely v. Washington,
+  </em>
+  <span class="citation" data-id="9434662"><a href="/opinion/136995/blakely-v-washington/" aria-description="Citation for case: Blakely v. Washington">542 U.S. 296</a></span>, <span class="citation" data-id="9434662"><a href="/opinion/136995/blakely-v-washington/" aria-description="Citation for case: Blakely v. Washington">124 S.Ct. 2531</a></span>, <span class="citation" data-id="9434662"><a href="/opinion/136995/blakely-v-washington/" aria-description="Citation for case: Blakely v. Washington">159 L.Ed.2d 403</a></span> (2004), but before its decision in
+  <em>
+   United States v. Booker,
+  </em>
+  — U.S. -, <span class="citation" data-id="9434718"><a href="/opinion/137739/united-states-v-booker/" aria-description="Citation for case: United States v. Booker">125 S.Ct. 738</a></span>, <span class="citation" data-id="9434718"><a href="/opinion/137739/united-states-v-booker/" aria-description="Citation for case: United States v. Booker">160 L.Ed.2d 621</a></span> (2005).
+ </p>
+<p id="b726-17">
+  Funchess appeals his conviction and sentence. On appeal, he argues that: (1) the evidence was insufficient to convict him; (2) he is entitled to a new trial because the government knowingly allowed Pennington to present false testimony; (3) the base offense level was improperly computed; (4) the district improperly applied sentencing enhancements; and (5) his sentence was excessive and unreasonable.
+ </p>
+<p id="b726-18">
+  II.
+ </p>
+<p id="b726-19">
+  Funchess argues that there was insufficient evidence as to his guilt for charges related to the October 2003 sales and the conspiracy. In reviewing an appeal based upon the sufficiency of evi
+  <span citation-index="1" class="star-pagination" label="701"> 
+   *701
+   </span>
+  dence, we review de novo, viewing evidence in a “ ‘light most favorable to the government, resolving conflicts in the government’s favor, and accepting all reasonable inferences that support the verdict.’ ”
+  <em>
+   United States v. Hamilton,
+  </em>
+  <span class="citation" data-id="782369"><a href="/opinion/782369/united-states-v-sidney-hamilton-also-known-as-sid/#1148" aria-description="Citation for case: United States v. Sidney Hamilton, Also Known as Sid">332 F.3d 1144, 1148</a></span> (8th Cir.2003) (quoting
+  <em>
+   United States v. Washington,
+  </em>
+  <span class="citation" data-id="780765"><a href="/opinion/780765/united-states-v-earnest-washington-united-states-of-america-v-wendell-e/#852" aria-description="Citation for case: United States v. Earnest Washington, United States of...">318 F.3d 845, 852</a></span> (8th Cir.2003)). We will only reverse a jury’s decision if “no reasonable jury could have found the accused guilty beyond a reasonable doubt.”
+  <em>
+   United States v. Espino,
+  </em>
+  <span class="citation" data-id="780642"><a href="/opinion/780642/united-states-v-jose-espino/#792" aria-description="Citation for case: United States v. Jose Espino">317 F.3d 788, 792</a></span> (8th Cir.2003).
+ </p>
+<p id="b727-6">
+  Concerning the October 2003 sales, viewing the testimony in favor of the jury’s verdict, there is sufficient evidence to support Funchess’s conviction. Witnesses testified that Funchess was the driver of the van during one of the October 27, 2003 transactions and during the October 28, 2003 sale. According to witnesses, the drugs were sold from the van. Funchess has attacked the credibility of the government witnesses. However, we do not consider attacks on witnesses’ credibility when we are evaluating an appeal based upon the sufficiency of evidence.
+  <em>
+   United States v. Dabney,
+  </em>
+  <span class="citation" data-id="786137"><a href="/opinion/786137/united-states-v-derek-d-dabney/#1043" aria-description="Citation for case: United States v. Derek D. Dabney">367 F.3d 1040, 1043</a></span> (8th Cir.2004). There was also corroborating evidence, including video surveillance, that was more than sufficient to justify the jury’s verdict on Funchess’s role during the October buys. We will not disturb a verdict when such clear evidence exists to support the conviction.
+ </p>
+<p id="b727-8">
+  Funchess also argues that his conviction for the conspiracy charge was not supported by sufficient evidence. After reviewing the record, giving deference to the jury’s verdict, we find no error. There is sufficient witness testimony and evidence linking Funchess to the larger conspiracy. And as we noted above, Funchess’s attacks on witness credibility are not sufficient to make us question the jury’s verdict.
+ </p>
+<p id="b727-9">
+  Consequently, we find that there is sufficient evidence as to Funchess’s convictions on all counts.
+ </p>
+<p id="b727-10">
+  III.
+ </p>
+<p id="b727-11">
+  Funchess argues the district erred by not granting a new trial because the government knowingly allowed Pennington to give false testimony on behalf of the government. Specifically, Funchess argues that the government took inconsistent positions in different trials as to Pennington’s knowledge of the alleged drug transactions.
+ </p>
+<p id="b727-12">
+  We review the district court’s denial of a motion for a new trial for abuse of discretion.
+  <em>
+   United States v. Walker,
+  </em>
+  <span class="citation" data-id="788781"><a href="/opinion/788781/united-states-v-demarko-s-walker/#848" aria-description="Citation for case: United States v. Demarko S. Walker">393 F.3d 842, 848</a></span> (8th Cir.2005). The government may not use or solicit false evidence or allow it to go uncorrected.
+  <em>
+   Giglio v. United States,
+  </em>
+  <span class="citation" data-id="108471"><a href="/opinion/108471/giglio-v-united-states/#153" aria-description="Citation for case: Giglio v. United States">405 U.S. 150, 153</a></span>, <span class="citation" data-id="108471"><a href="/opinion/108471/giglio-v-united-states/" aria-description="Citation for case: Giglio v. United States">92 S.Ct. 763</a></span>, <span class="citation" data-id="108471"><a href="/opinion/108471/giglio-v-united-states/" aria-description="Citation for case: Giglio v. United States">31 L.Ed.2d 104</a></span> (1972). To prove prosecutorial use of false testimony, a defendant must show that: (1) the prosecution used perjured testimony; (2) the prosecution should have known or actually knew of the perjury; and (3) there was a reasonable likelihood that the perjured testimony could have affected the jury’s verdict.
+  <em>
+   United States v. Peterson,
+  </em>
+  <span class="citation multiple-matches"><a href="/c/F.3d/223/756/">223 F.3d 756</a></span>, 763 (8th Cir.2000).
+ </p>
+<p id="b727-13">
+  Funchess argues that Pennington’s testimony was false because Pennington’s plea agreement with the government said Pennington was not involved in the sale of crack cocaine on October 27 and 28, 2003. Yet, during Funchess’s trial, Pennington testified about Funchess’s role in selling crack cocaine on those days, presumably because Pennington was also present at the sales. After reviewing the record, we believe that this alleged inconsistency between Pennington’s plea agreement and testimony is far from clear. Pennington wrote “codefendants did this” on certain paragraphs in his plea agreement. Fun-
+  <span citation-index="1" class="star-pagination" label="702"> 
+   *702
+   </span>
+  chess argues that these statements deny any involvement by Pennington for those paragraphs. In contrast, the government argues that Pennington used that phrasing because he did not receive controlled buy money for those purchases and did not want to pay restitution for those transactions. Further, the government argues there is no explicit statement by Pennington in the plea agreement where Pennington denies involvement in transactions on those days.
+ </p>
+<p id="b728-4">
+  We cannot say that the district court abused its discretion by finding that there was no perjured testimony. The government and district court’s interpretation of the plea agreement is reasonable, and we will not order a new trial under such circumstances. Because we find no perjury, we need not examine government intent nor evaluate prejudice to Funchess.
+ </p>
+<p id="b728-5">
+  IV.
+ </p>
+<p id="b728-6">
+  Funchess argues that there was insufficient evidence to support the district court’s computation of the base offense level such that he was responsible for more than two kilograms of crack cocaine. Based upon our analysis of the record, we agree there is insufficient evidence to support the two kilogram finding.
+ </p>
+<p id="b728-7">
+  We review a district court’s factual findings underlying a calculation of a base offense level for clear error.
+  <em>
+   United States v. Graham,
+  </em>
+  <span class="citation" data-id="781316"><a href="/opinion/781316/united-states-v-charles-carl-graham/#609" aria-description="Citation for case: United States v. Charles Carl Graham">323 F.3d 603, 609</a></span> (8th Cir.2003). It is clear from the record that Funchess objected to the sufficiency of the evidence as to the two kilogram finding in the presentence report. The government’s only response was that the record supported that finding. Specifically, in its trial memorandum, the government relied upon Exhibits 2 and 3, which are the debriefing reports from Pennington, in which he indicated that Funchess accompanied Pennington on trips to Chicago during which more than two kilograms of crack cocaine were obtained.
+ </p>
+<p id="b728-9">
+  The sentencing transcript shows that there was considerable discussion about whether the district court could rely upon the debriefing reports, since neither Pennington nor the police officer who authored the reports were available for testimony or cross-examination. Ultimately, the court indicated that it was overruling the defendant’s objection to the base offense level and stated:
+ </p>
+<blockquote id="b728-10">
+  The base offense level has been established by a preponderance of the evidence, that Defendant was involved in at least 2 kilograms of cocaine base, taking into account not only his own actions but the actions of his co-conspirators, as is permitted under the relevant conduct provisions in the guidelines. Base offense level is thirty-eight.
+ </blockquote>
+<p id="b728-11">
+  The district court gave no explanation as to how it arrived at the two kilogram figure. The government, in its arguments to the district court, said that the two kilogram figure was supported by the “record” as well as Exhibits 2 and 3. However, the district court specifically stated at sentencing that it was not relying upon Exhibits 2 and 3 because they were “... to some degree, a duplication of what [it] heard during the trial.... ”
+ </p>
+<p id="b728-12">
+  This led to a discussion at oral argument in this appeal as to what evidence, if any, existed in the trial record to support the two kilogram figure. Based on our review of the record, there was no such evidence. We invited supplemental, post-argument briefs on the issue of what evidence existed to support the two kilogram finding. The government was not able to cite to any evidence in the record. Furthermore, the presentence report goes through the trial record in some detail. It outlines the various sales that occurred, the seizures of
+  <span citation-index="1" class="star-pagination" label="703"> 
+   *703
+   </span>
+  drugs, as well as Pennington’s trial testimony about Funchess. The presentence report indicates that the only relevant trial testimony was that Pennington had sold two to three ounces of crack cocaine to Funchess during the course of the conspiracy. There is nothing in the presentence report about any other testimony concerning drugs involved in the conspiracy. The presentence report arrives at the two kilogram figure based solely upon Exhibits 2 and 3, which the district court said it was not considering.
+ </p>
+<p id="b729-5">
+  As a result, we reverse as to the issue of the base offense level computation and remand for a new sentencing. We also urge the district court to reexamine the mitigating role issue if it is ultimately determined Funchess is responsible for more than two kilograms but was merely a passenger during the trips to Chicago.
+ </p>
+<p id="b729-6">
+  V.
+ </p>
+<p id="b729-7">
+  Funchess argues that the district court erred by applying sentencing enhancements for a prior felony drug conviction and for firearm possession. We review the district court’s decision on the prior drug conviction enhancement de novo because it is a matter of statutory interpretation.
+  <em>
+   United States v. Johnston,
+  </em>
+  <span class="citation" data-id="769677"><a href="/opinion/769677/united-states-v-phillip-alexander-johnston/#860" aria-description="Citation for case: United States v. Phillip Alexander Johnston">220 F.3d 857, 860</a></span> (8th Cir.2000).
+ </p>
+<p id="b729-8">
+  Funchess argues that he should not have received an enhancement to his sentence pursuant to <span class="citation no-link">21 U.S.C. § 851</span> based on his May 16, 2003 state conviction. He argues that his previous conviction in Iowa was not a prior felony drug conviction. He contends that the May 2003 conviction was not a “prior” conviction because his conviction in the present matter was for acts in a conspiracy that spanned 2002 to October 2003. We reject this argument because Funchess’s overt acts in October 2003 occurred after his May 2003 conviction. Under such circumstances, the previous conviction is considered “prior” for purposes of applying a sentencing enhancement.
+  <em>
+   United States v. Titlbach,
+  </em>
+  <span class="citation" data-id="783096"><a href="/opinion/783096/united-states-v-ronald-titlbach/#697" aria-description="Citation for case: United States v. Ronald Titlbach">339 F.3d 692, 697</a></span> (8th Cir.2003) (applying a prior conviction enhancement where the defendant committed an act in furtherance of a conspiracy after the date a prior conviction was finalized).
+ </p>
+<p id="b729-10">
+  Funchess also argues that his May 2003 conviction was not “final” because it was a deferred judgment. His deferred judgment under Iowa law, however, was not expunged. We have held that even expunged prior deferred judgments in Iowa may be used for purposes of federal sentencing.
+  <em>
+   United States v. Lincoln,
+  </em>
+  <span class="citation" data-id="790298"><a href="/opinion/790298/united-states-v-john-j-lincoln/#525" aria-description="Citation for case: United States v. John J. Lincoln">408 F.3d 522, 525</a></span> (8th Cir.2005).
+ </p>
+<p id="b729-11">
+  . Funchess further contends that the district court improperly applied a firearm enhancement to his sentence under U.S.S.G. § 2D1.1(b)(1). We review the district court’s factual findings for clear error “and its construction and application of the guidelines de novo.”
+  <em>
+   United States v. Peters,
+  </em>
+  <span class="citation" data-id="788902"><a href="/opinion/788902/united-states-v-tammy-j-peters/#1105" aria-description="Citation for case: United States v. Tammy J. Peters">394 F.3d 1103, 1105</a></span> (8th Cir.2005). The government bears the burden of proof for seeking an enhancement under § 2D1.1(b)(1).
+  <em>
+   United States v. Atkins,
+  </em>
+  <span class="citation" data-id="773363"><a href="/opinion/773363/united-states-v-james-f-atkins/#1213" aria-description="Citation for case: United States v. James F. Atkins">250 F.3d 1203, 1213</a></span> (8th Cir.2001). The burden of proof requires the government to show a “temporal and spacial relation ... between the weapon, the drug trafficking activity, and the defendant.”
+  <em>
+   <span class="citation" data-id="773363"><a href="/opinion/773363/united-states-v-james-f-atkins/" aria-description="Citation for case: United States v. James F. Atkins">Id.</a></span>
+  </em>
+  at 1214 (quoting
+  <em>
+   United States v. Payne,
+  </em>
+  <span class="citation" data-id="716666"><a href="/opinion/716666/united-states-v-lonnie-payne/#763" aria-description="Citation for case: United States v. Lonnie Payne">81 F.3d 759, 763</a></span> (8th Cir.1996)).
+ </p>
+<p id="b729-12">
+  In this case, police seized two firearms from, the group’s stash house during a search pursuant to a warrant on October 7, 2003. Several witnesses testified that they saw the weapons at the house while drugs were being cooked and set to deliver. Police also seized crack cocaine from the house during the same search. We have held that such a connection is sufficient to support an enhancement.
+  <em>
+   United States v.
+  </em>
+<span citation-index="1" class="star-pagination" label="704"> 
+   *704
+   </span>
+<em>
+   Macklin,
+  </em>
+  <span class="citation" data-id="733314"><a href="/opinion/733314/united-states-v-stacy-macklin-united-states-of-america-v-willie-love/#1048" aria-description="Citation for case: United States v. Stacy MacKlin United States of America...">104 F.3d 1046, 1048-49</a></span> (8th Cir.1997). As a result, we find no error with the district court’s application of the firearm enhancement.
+ </p>
+<p id="b730-4">
+  Consequently, we affirm the district court’s judgment as to the prior drug conviction and firearm sentencing enhancements.
+ </p>
+<p id="b730-5">
+  VI.
+ </p>
+<p id="b730-6">
+  Funchess also argues that his sentence was excessive and unreasonable. Under
+  <em>
+   <span class="citation" data-id="9434718"><a href="/opinion/137739/united-states-v-booker/" aria-description="Citation for case: United States v. Booker">Booker</a></span>,
+  </em>
+  this court may review Funchess’s sentence to determine if it was unreasonable.
+  <em>
+   Booker,
+  </em>
+  <span class="citation" data-id="9434718"><a href="/opinion/137739/united-states-v-booker/#765" aria-description="Citation for case: United States v. Booker">125 S.Ct. at 765-66</a></span>. However, because we have reversed the district court’s finding as to the base offense level on the conspiracy charge and vacated the existing sentence, it is not necessary to determine if the sentence was excessive or unreasonable.
+ </p>
+<p id="b730-7">
+  VII.
+ </p>
+<p id="b730-8">
+  Funchess has asked that if we remand this case for resentencing, as we have done, that we assign this case to a different judge. Funchess cites
+  <em>
+   Santobello v. New York,
+  </em>
+  <span class="citation" data-id="9424699"><a href="/opinion/108416/santobello-v-new-york/" aria-description="Citation for case: Santobello v. New York">404 U.S. 257</a></span>, <span class="citation" data-id="9424699"><a href="/opinion/108416/santobello-v-new-york/" aria-description="Citation for case: Santobello v. New York">92 S.Ct. 495</a></span>, <span class="citation" data-id="9424699"><a href="/opinion/108416/santobello-v-new-york/" aria-description="Citation for case: Santobello v. New York">30 L.Ed.2d 427</a></span> (1971), to support his contention that this case should be reassigned. However, in
+  <em>
+   <span class="citation" data-id="9424699"><a href="/opinion/108416/santobello-v-new-york/" aria-description="Citation for case: Santobello v. New York">Santobello</a></span>
+  </em>
+  the Court was dealing with a much different issue. In this matter, unlike
+  <em>
+   <span class="citation" data-id="9424699"><a href="/opinion/108416/santobello-v-new-york/" aria-description="Citation for case: Santobello v. New York">Santobello</a></span>,
+  </em>
+  the district court was not exposed to information that would unduly prejudice resentencing and there is no evidence that the district court’s decision-making would be tainted by the previous sentencing. As a result, this case, insofar as it is remanded, should not be reassigned.
+ </p>
+<p id="b730-11">
+  Accordingly, we affirm in part and reverse and remand in part as described herein.
+ </p>
+</opinion>

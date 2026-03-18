@@ -10,8 +10,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:5173", "*"],
+    # allow_origins=["*"],
     allow_credentials=True,
+    # allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -30,7 +32,7 @@ def ingest_cases(data: SearchRequest):
     page = 1    
     max_pages = 3
 
-    while page <= max_pages and len(downloaded_files) < 5:
+    while page <= max_pages and len(downloaded_files) < 6:
         params = {"q": data.query, "type": "o", "format": "json", "page": page}
         response = requests.get(url, headers=headers, params=params)
         result = response.json()
@@ -39,7 +41,7 @@ def ingest_cases(data: SearchRequest):
             break
 
         for case in result["results"]:
-            if len(downloaded_files) >= 5:
+            if len(downloaded_files) >= 6:
                 break
 
             case_name = case.get("caseName", "unknown_case")
@@ -47,7 +49,7 @@ def ingest_cases(data: SearchRequest):
             case_name = re.sub(r'[^a-zA-Z0-9_]', '_', case_name)
             opinion_url = case.get("absolute_url")
             if not opinion_url:
-                processing_log.append({"case": original_name, "status": "⚠️ No URL"})
+                processing_log.append({"case": original_name, "status": " No URL"})
                 continue
 
             opinion_id = opinion_url.split("/")[2]
@@ -76,14 +78,14 @@ def ingest_cases(data: SearchRequest):
                             with open(f"docs/{file_name}.pdf", "wb") as f:
                                 f.write(pdf)
                             downloaded_files.append({"name": f"{file_name}.pdf", "type": "PDF"})
-                            processing_log.append({"case": case_name, "status": "✅ Saved PDF"})
+                            processing_log.append({"case": case_name, "status": "Saved PDF"})
                         except Exception:
-                            processing_log.append({"case": case_name, "status": "❌ PDF failed"})
+                            processing_log.append({"case": case_name, "status": "PDF failed"})
                     else:
-                        processing_log.append({"case": case_name, "status": "⚠️ No document"})
+                        processing_log.append({"case": case_name, "status": "No document"})
 
             except Exception as e:
-                processing_log.append({"case": original_name, "status": f"❌ Error"})
+                processing_log.append({"case": original_name, "status": f"Error"})
 
             time.sleep(0.5)
 
@@ -132,3 +134,41 @@ def clear_docs():
         "deleted": deleted,
         "skipped": skipped
     }
+
+def fetch_related_links(query: str):
+    try:
+        url = "https://www.courtlistener.com/api/rest/v4/search/"
+        headers = {"Authorization": "Token 4571f32c57dbb3dc179613ea6d8b064c2baffb33"}
+        params = {"q": query, "type": "o", "format": "json", "page": 1}
+
+        response = requests.get(
+            url,
+            headers=headers,
+            params=params,
+            verify=False,      # ✅ fix SSL
+            timeout=10
+        )
+
+        print(f"CourtListener status: {response.status_code}")  # ✅ debug
+        data = response.json()
+        print(f"CourtListener results: {len(data.get('results', []))}")  # ✅ debug
+
+        links = []
+        for case in data.get("results", [])[:5]:
+            case_name = case.get("caseName", "Unknown Case")
+            absolute_url = case.get("absolute_url", "")
+            court = case.get("court_id", "")
+            date_filed = case.get("dateFiled", "")
+            if absolute_url:
+                links.append({
+                    "name": case_name,
+                    "url": f"https://www.courtlistener.com{absolute_url}",
+                    "court": court,
+                    "date": date_filed
+                })
+
+        return links
+
+    except Exception as e:
+        print(f"CourtListener fetch failed: {e}")
+        return []
