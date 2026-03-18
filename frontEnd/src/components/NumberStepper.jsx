@@ -6,7 +6,6 @@ export default function NumberStepper({ label, value, onChange, tooltip }) {
       <div className="param-label-row">
         <div className="param-label">
           <span>{label}</span>
-          <span className="tooltip-icon" title={tooltip}>?</span>
         </div>
       </div>
       <div className="stepper-control">

@@ -1,6 +1,4 @@
-/* Controls.css — NumberStepper + SliderControl */
 
-/* Shared label row */
 .param-label-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
 .param-label     { display:flex; align-items:center; gap:6px; font-size:13px; color:#c0c8d8; }
 .param-value     { font-size:13px; color:#4a9eff; font-family:'DM Mono',monospace; font-weight:600; }
@@ -11,7 +9,6 @@
   display:flex; align-items:center; justify-content:center;
 }
 
-/* ── Number Stepper ── */
 .stepper-wrapper { margin-bottom:20px; }
 
 .stepper-control {
@@ -29,7 +26,7 @@
 }
 .stepper-btn:hover { background:#2e3650; color:#f0f0f0; }
 
-/* ── Slider ── */
+
 .slider-wrapper { margin-bottom:20px; }
 
 .slider-track { position:relative; height:6px; border-radius:3px; background:#2a3040; }

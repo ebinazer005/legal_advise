@@ -9,12 +9,13 @@ import "../styles/RetrievalPanel.css";
 import axios from "axios";
 
 export default function RetrievalPanel() {
-  const [query, setQuery] = useState("Ask any thing about legal questions");
+  const [query, setQuery] = useState("");
   const [topK, setTopK] = useState(3);
   const [alpha, setAlpha] = useState(0.75);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [sources, setSources] = useState([]);
+  const [relatedLinks, setRelatedLinks] = useState([]);
 
   const handleSearch = async () => {
     if (!query.trim()) return;
@@ -22,6 +23,7 @@ export default function RetrievalPanel() {
     setIsLoading(true);
     setResult(null);
     setSources([]);
+    setRelatedLinks([]);
 
     try {
       const response = await axios.post("http://localhost:8002/ask", {
@@ -34,7 +36,7 @@ export default function RetrievalPanel() {
       setResult({
         query: data.query,
         response: data.answer,
-        top_k: data.top_k,      
+        top_k: data.top_k,
         alpha: data.alpha
       });
 
@@ -46,6 +48,7 @@ export default function RetrievalPanel() {
       }));
 
       setSources(formattedSources);
+      setRelatedLinks(data.related_links || []);
     }
     catch (error) {
       console.error("API Error:", error);
@@ -59,9 +62,86 @@ export default function RetrievalPanel() {
     setIsLoading(false);
   };
 
+
+const renderAnswer = (text) => {
+    if (!text) return null;
+
+    text = text.replace(/- ([^|]+\| Court:[^|]+\| Date:[^|]+\| URL: https?:\/\/[^\s]+)/g, '\n- $1')
+    const lines = text.split('\n');
+
+    return lines.map((line, i) => {
+
+        // ✅ section headers
+        if (line.includes('SECTION') && (line.includes('━') || line.includes('---'))) {
+            return <div key={i} className="section-divider">{line}</div>;
+        }
+
+        if (line.startsWith('━') || line.startsWith('---')) {
+            return null;
+        }
+
+        // ✅ clickable URL lines in section 3
+        if (line.includes('URL: https://')) {
+            const parts = line.split('| ');
+            const namePart = parts[0]?.replace('- ', '').trim();
+            const courtPart = parts[1]?.replace('Court:', '').trim();
+            const datePart = parts[2]?.replace('Date:', '').trim();
+            const urlPart = parts[3]?.replace('URL: ', '').trim();
+            return (
+                <div key={i} className="case-link-row">
+                    <span className="case-link-bullet">📄</span>
+                    <div className="case-link-content">
+                        <a href={urlPart} target="_blank" rel="noopener noreferrer" className="case-link">
+                            {namePart}
+                        </a>
+                        <span className="case-link-meta">🏛️ {courtPart} · 📅 {datePart}</span>
+                    </div>
+                </div>
+            );
+        }
+
+        // ✅ split fields like "👤 Case Name: X 📅 Last Hearing: Y" into separate lines
+        const emojiFields = ['👤', '📅', '⏭️', '💰', '📋', '📝', '⚖️', '✅', '🗣️'];
+        const hasMultipleEmojis = emojiFields.filter(e => line.includes(e)).length > 1;
+
+        if (hasMultipleEmojis) {
+            // ✅ split by emoji fields
+            const splitLines = line.split(/(?=👤|📅|⏭️|💰|📋|📝|⚖️|✅|🗣️)/u).filter(Boolean);
+            return (
+                <div key={i}>
+                    {splitLines.map((part, j) => (
+                        <p key={j} className="answer-field">{part.trim()}</p>
+                    ))}
+                </div>
+            );
+        }
+
+        // ✅ single emoji field
+        if (emojiFields.some(e => line.startsWith(e))) {
+            return <p key={i} className="answer-field">{line}</p>;
+        }
+
+        // ✅ bullet points
+        if (line.startsWith('- ')) {
+            return (
+                <div key={i} className="answer-bullet">
+                    <span className="bullet-dot">•</span>
+                    <span>{line.replace('- ', '')}</span>
+                </div>
+            );
+        }
+
+        if (line.trim() === '') {
+            return <div key={i} style={{ height: '8px' }} />;
+        }
+
+        return <p key={i} className="answer-line">{line}</p>;
+    });
+};
+
   return (
     <div className="panel retrieval-panel">
-    
+
 
       {/* Header */}
       <div className="panel-title">
@@ -90,6 +170,14 @@ export default function RetrievalPanel() {
             {isLoading && <span className="spinner" />}
             {isLoading ? "Searching..." : "Search"}
           </button>
+
+          {/* <button
+            className="clear-btn"
+            onClick={handleClearDB}
+            disabled={isLoading}
+          >
+            Clear DB
+          </button> */}
         </div>
 
         {/* Right: Parameters */}
@@ -102,7 +190,7 @@ export default function RetrievalPanel() {
             tooltip="Number of top results to retrieve"
           />
           <SliderControl
-            label="alpha"
+            label="cosine similarity "
             value={alpha}
             min={0} max={1} step={0.01}
             onChange={setAlpha}
@@ -134,11 +222,7 @@ export default function RetrievalPanel() {
           <div className="result-block">
             <h2>Response</h2>
             <div className="response-card">
-              {result.response.split("\n\n").map((para, i) => (
-                <p key={i} className="response-para">
-                  {para.replace(/\*\*(.*?)\*\*/g, "$1")}
-                </p>
-              ))}
+              {renderAnswer(result.response)}
             </div>
           </div>
 

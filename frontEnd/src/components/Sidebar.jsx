@@ -1,13 +1,15 @@
-import Logo from "./Logo";
-import { NAV_ITEMS } from "./constants";
 import "../styles/Sidebar.css";
 
 export default function Sidebar({ active, onSelect }) {
+const navItems = ["Ingestion", "Retrieval" , "Client_details"];
+
   return (
     <aside className="sidebar">
-      <Logo />
+        <div className="logo">
+    <span className="logo-text">legal Advisor </span>
+    </div>
       <nav className="nav-list">
-        {NAV_ITEMS.map(item => (
+        {navItems.map(item => (
           <div
             key={item}
             className={`nav-item ${active === item ? "active" : ""}`}

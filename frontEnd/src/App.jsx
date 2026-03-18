@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import RetrievalPanel   from "./components/RetrievalPanel";
-// import InformationPanel from "./components/InformationPanel";
 import IngestionPanel   from "./components/IngestionPanel";
+import HearingPanel from "./components/HearingPanel";
 import "./styles/global.css";
 
 export default function App() {
@@ -10,8 +10,9 @@ export default function App() {
 
   const panels = {
     Retrieval:   <RetrievalPanel />,
-    // Information: <InformationPanel />,
     Ingestion:   <IngestionPanel />,
+    Client_details : <HearingPanel /> 
+
   };
 
   return (

@@ -8,7 +8,6 @@ export default function SliderControl({ label, value, min, max, step, onChange, 
       <div className="param-label-row">
         <div className="param-label">
           <span>{label}</span>
-          <span className="tooltip-icon" title={tooltip}>?</span>
         </div>
         <span className="param-value">{value.toFixed(2)}</span>
       </div>

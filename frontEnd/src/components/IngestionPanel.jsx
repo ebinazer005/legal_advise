@@ -115,7 +115,7 @@ const handleSearch = async () => {
 
       if (response.data.files?.length > 0) {
         setDownloadedFiles(response.data.files);
-        setMessage(`✅ Downloaded ${response.data.files.length} files`);
+        setMessage(`Downloaded ${response.data.files.length} files`);
 
         // refresh uploaded files list after download
         const res = await axios.get("http://localhost:8000/files");
@@ -159,6 +159,7 @@ const handleSearch = async () => {
     const response = await axios.delete("http://localhost:8000/files/delete", {
       data: { file_names: selectedFiles.map(f => f.name) }
     });
+
     setMessage(` ${response.data.message}`);
     const res = await axios.get("http://localhost:8000/files");
     const backendFiles = res.data.files.map((f) => ({

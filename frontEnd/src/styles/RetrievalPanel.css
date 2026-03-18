@@ -1,10 +1,8 @@
-/* RetrievalPanel.css */
 .retrieval-grid {
   display:grid; grid-template-columns:1fr 300px;
   gap:24px; margin-bottom:28px;
 }
 
-/* Query input */
 .query-label {
   display:block; font-size:12px; color:#7a8499;
   letter-spacing:.5px; text-transform:uppercase; margin-bottom:8px;
@@ -18,7 +16,7 @@
 }
 .query-textarea:focus { border-color:#4a9eff; }
 
-/* Search button */
+
 .search-btn {
   margin-top:12px; padding:10px 24px;
   background:linear-gradient(135deg,#2a6dd9,#4a9eff);
@@ -41,11 +39,11 @@
   animation:spin .8s linear infinite;
 }
 
-/* Params card */
+
 .params-card { background:#1e2333; border:1px solid #2a3248; border-radius:10px; padding:18px 20px; }
 .params-title { font-weight:600; font-size:14px; color:#c0c8d8; margin:0 0 18px; letter-spacing:-0.2px; }
 
-/* Results */
+
 .results-section { animation:fadeIn .4s ease; }
 .result-block    { margin-bottom:24px; }
 .result-block h2 { font-weight:700; font-size:20px; color:#e0e8ff; margin:0 0 10px; letter-spacing:-0.3px; }
@@ -56,8 +54,64 @@
 .response-para { color:#b0bcd8; font-size:14px; line-height:1.8; }
 .response-para + .response-para { margin-top:12px; }
 
-/* Empty state */
+
 .empty-state      { text-align:center; padding:40px 20px; color:#3a4460; }
 .empty-icon       { font-size:40px; margin-bottom:12px; opacity:.4; }
 .empty-state p    { font-size:14px; }
 .empty-hint       { font-size:12px !important; margin-top:6px; }
+
+
+.section-divider {
+    color: #dedada;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 16px 0 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.section-line {
+    color: #2a3248;
+    margin: 4px 0;
+}
+
+.case-link-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #1e2333;
+    border: 1px solid #2a3248;
+    border-radius: 8px;
+    margin: 6px 0;
+}
+
+.case-link-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.case-link {
+    color: #09b6eb;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.case-link:hover {
+    color: #fefefe;
+    text-decoration: underline;
+}
+
+.case-link-meta {
+    color: #7a8499;
+    font-size: 0.75rem;
+}
+
+.case-link-bullet {
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
