@@ -6,6 +6,7 @@ export default function HearingPanel() {
     const [hearings, setHearings] = useState([]);
     const [message, setMessage] = useState("");
     const [form, setForm] = useState({
+        case_id: "",
         case_name: "",
         next_hearing_date: "",
         last_hearing_date: "",
@@ -29,12 +30,12 @@ export default function HearingPanel() {
 
     const handleAdd = async () => {
         if (!form.case_name || !form.next_hearing_date) {
-            setMessage("⚠️ Case Name and Next Hearing Date are required");
+            setMessage("Case Name and Next Hearing Date are required");
             return;
         }
         try {
             await axios.post("http://localhost:8000/hearings", form);
-            setMessage("✅ Client details added successfully");
+            setMessage("Client details added successfully");
             setForm({
                 case_name: "",
                 next_hearing_date: "",
@@ -45,17 +46,17 @@ export default function HearingPanel() {
             });
             fetchHearings();
         } catch (err) {
-            setMessage("❌ Failed to add client details");
+            setMessage("Failed to add client details");
         }
     };
 
     const handleDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:8000/hearings/${id}`);
-            setMessage("🗑️ Record deleted");
+            setMessage("Record deleted");
             fetchHearings();
         } catch (err) {
-            setMessage("❌ Failed to delete");
+            setMessage("Failed to delete");
         }
     };
 
@@ -71,21 +72,31 @@ export default function HearingPanel() {
             {/* Add Client Details Form */}
             <div className="info-table">
                 <div className="info-row">
-                    <span className="info-label">📋 Add Client Details</span>
+                    <span className="info-label">Add Client Details</span>
+                </div>
+
+                <div className="info-row">
+                    <span className="info-label">Case ID * </span>
+                    <input
+                        className="search-input"
+                        placeholder="enter the cases id "
+                        value={form.case_id}
+                        onChange={e => setForm({ ...form, case_id: e.target.value })}
+                    />
                 </div>
 
                 <div className="info-row">
                     <span className="info-label">Case Name *</span>
                     <input
                         className="search-input"
-                        placeholder="Enter the cilent Name "
+                        placeholder="enter the cilent Name "
                         value={form.case_name}
                         onChange={e => setForm({ ...form, case_name: e.target.value })}
                     />
                 </div>
 
                 <div className="info-row">
-                    <span className="info-label">⏮️ Last Hearing Date</span>
+                    <span className="info-label">Last Hearing Date</span>
                     <input
                         className="search-input"
                         type="date"
@@ -95,7 +106,7 @@ export default function HearingPanel() {
                 </div>
 
                 <div className="info-row">
-                    <span className="info-label">⏭️ Next Hearing Date *</span>
+                    <span className="info-label">Next Hearing Date *</span>
                     <input
                         className="search-input"
                         type="date"
@@ -105,7 +116,7 @@ export default function HearingPanel() {
                 </div>
 
                 <div className="info-row">
-                    <span className="info-label">💰 Fee Paid (RM)</span>
+                    <span className="info-label">Fee Paid (RM)</span>
                     <input
                         className="search-input"
                         type="number"
@@ -116,22 +127,22 @@ export default function HearingPanel() {
                 </div>
 
                 <div className="info-row">
-                    <span className="info-label">📋 Case Status</span>
+                    <span className="info-label">Case Status</span>
                     <select
                         className="search-input"
                         value={form.case_status}
                         onChange={e => setForm({ ...form, case_status: e.target.value })}
                     >
-                        <option value="Current">🟢 Current</option>
-                        <option value="Case Finished">✅ Case Finished</option>
+                        <option value="Current">Current</option>
+                        <option value="Case Finished">Case Finished</option>
                     </select>
                 </div>
 
                 <div className="info-row">
-                    <span className="info-label">📝 Notes</span>
+                    <span className="info-label">Notes</span>
                     <input
                         className="search-input"
-                        placeholder="notes..."
+                        placeholder="leave notes"
                         value={form.notes}
                         onChange={e => setForm({ ...form, notes: e.target.value })}
                     />
@@ -146,7 +157,7 @@ export default function HearingPanel() {
             {hearings.length > 0 && (
                 <div className="info-table" style={{ marginTop: "16px" }}>
                     <div className="info-row">
-                        <span className="info-label">📋 All Client Records</span>
+                        <span className="info-label"> All Client Records</span>
                         <span className="info-value">{hearings.length} records</span>
                     </div>
 
@@ -156,17 +167,17 @@ export default function HearingPanel() {
                                 <span className="info-label" style={{ color: "#e0eaff", fontSize: "0.95rem" }}>
                                     {h.case_name}
                                 </span>
-                                <span className="hearing-date-badge">⏮️ Last: {h.last_hearing_date}</span>
+                                <span className="hearing-date-badge">Last: {h.last_hearing_date}</span>
                                 <span className="hearing-date-badge" style={{ borderColor: "#4ade80", color: "#4ade80" }}>
-                                    ⏭️ Next: {h.next_hearing_date}
+                                     Next: {h.next_hearing_date}
                                 </span>
-                                <p className="file-size">💰 Fee Paid: RM {h.fee_paid}</p>
+                                <p className="file-size">Fee Paid: RM {h.fee_paid}</p>
                                 <span className={`status-badge ${h.case_status === "Current" ? "status-current" : "status-finished"}`}>
-                                    {h.case_status === "Current" ? "🟢 Current" : "✅ Case Finished"}
+                                    {h.case_status === "Current" ? "Current" : "Case Finished"}
                                 </span>
-                                {h.notes && <p className="file-size">📝 {h.notes}</p>}
+                                {h.notes && <p className="file-size">{h.notes}</p>}
                             </div>
-                            <button className="clear-btn" onClick={() => handleDelete(h.id)}>🗑️</button>
+                            <button className="clear-btn" onClick={() => handleDelete(h.id)}>Delete</button>
                         </div>
                     ))}
                 </div>

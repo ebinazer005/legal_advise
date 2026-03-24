@@ -6,6 +6,7 @@ import StatusBadge from "../components/StatusBadge";
 import SourceCard from "../components/SourceCard";
 
 import "../styles/RetrievalPanel.css";
+import "../styles/status-messages.css";
 import axios from "axios";
 
 export default function RetrievalPanel() {
@@ -16,46 +17,171 @@ export default function RetrievalPanel() {
   const [result, setResult] = useState(null);
   const [sources, setSources] = useState([]);
   const [relatedLinks, setRelatedLinks] = useState([]);
+  const [statusMessage, setStatusMessage] = useState(null);  // ✅ NEW
+
+  // const handleSearch = async () => {
+  //   if (!query.trim()) return;
+
+  //   setIsLoading(true);
+  //   setResult(null);
+  //   setSources([]);
+  //   setRelatedLinks([]);
+
+  //   try {
+  //     const response = await axios.post("http://localhost:8002/ask", {
+  //       query: query,
+  //       top_k: topK,
+  //       alpha: alpha
+  //     });
+  //     const data = response.data;
+
+  //     setResult({
+  //       query: data.query,
+  //       response: data.answer,
+  //       top_k: data.top_k,
+  //       alpha: data.alpha
+  //     });
+
+  //     const formattedSources = data.context.map((c, i) => ({
+  //       id: c.id,
+  //       content: c.content,
+  //       source: c.source,
+  //       page: c.page
+  //     }));
+
+  //     setSources(formattedSources);
+  //     setRelatedLinks(data.related_links || []);
+  //   }
+  //   catch (error) {
+  //     console.error("API Error:", error);
+  //   }
+  //   setIsLoading(false)
+  // };
+
 
   const handleSearch = async () => {
-    if (!query.trim()) return;
+  if (!query.trim()) return;
 
-    setIsLoading(true);
+  setIsLoading(true);
+  setResult(null);
+  setSources([]);
+  setRelatedLinks([]);
+  setStatusMessage(null);
+
+  try {
+    const response = await axios.post("http://localhost:8002/ask", {
+      query: query,
+      top_k: topK,
+      alpha: alpha
+    });
+    const data = response.data;
+
+    // ✅ CHECK STATUS: Error
+    if (data.status === "error") {
+      setStatusMessage({
+        type: "error",
+        title: "❌ Error",
+        message: data.answer,
+      });
+      setResult(null);
+      setSources([]);
+      setRelatedLinks([]);
+      setIsLoading(false);
+      return;
+    }
+
+    // ✅ CHECK STATUS: Warning
+    if (data.status === "warning") {
+      setStatusMessage({
+        type: "warning",
+        title: "⚠️ Warning: ID/Name Mismatch",
+        message: data.answer,
+        details: {
+          foundCaseId: data.case_id,
+          foundCaseName: data.case_name,
+        }
+      });
+      setResult(null);
+      setSources([]);
+      setRelatedLinks([]);
+      setIsLoading(false);
+      return;
+    }
+
+    // ✅ SUCCESS: Render normally
+    setStatusMessage(null);
+    setResult({
+      query: data.query,
+      response: data.answer,
+      top_k: data.top_k,
+      alpha: data.alpha
+    });
+
+    const formattedSources = data.context.map((c, i) => ({
+      id: c.id,
+      content: c.content,
+      source: c.source,
+      page: c.page
+    }));
+
+    setSources(formattedSources);
+    setRelatedLinks(data.related_links || []);
+  }
+  catch (error) {
+    console.error("API Error:", error);
+    setStatusMessage({
+      type: "error",
+      title: "❌ API Error",
+      message: error.response?.data?.detail || error.message || "An error occurred while processing your query."
+    });
     setResult(null);
     setSources([]);
     setRelatedLinks([]);
+  }
+  finally {
+    setIsLoading(false);
+  }
+};
 
-    try {
-      const response = await axios.post("http://localhost:8002/ask", {
-        query: query,
-        top_k: topK,
-        alpha: alpha
-      });
-      const data = response.data;
 
-      setResult({
-        query: data.query,
-        response: data.answer,
-        top_k: data.top_k,
-        alpha: data.alpha
-      });
+const renderStatusMessage = () => {
+  if (!statusMessage) return null;
 
-      const formattedSources = data.context.map((c, i) => ({
-        id: c.id,
-        content: c.content,
-        source: c.source,
-        page: c.page
-      }));
+  const isError = statusMessage.type === "error";
+  const isWarning = statusMessage.type === "warning";
 
-      setSources(formattedSources);
-      setRelatedLinks(data.related_links || []);
-    }
-    catch (error) {
-      console.error("API Error:", error);
-    }
-    setIsLoading(false)
-  };
+  return (
+    <div className={`status-message ${statusMessage.type}`}>
+      <div className="status-header">
+        <h3>{statusMessage.title}</h3>
+        <button
+          className="status-close"
+          onClick={() => setStatusMessage(null)}
+          aria-label="Close message"
+        >
+          ✕
+        </button>
+      </div>
 
+      <p className="status-body">{statusMessage.message}</p>
+
+      {isWarning && statusMessage.details && (
+        <div className="warning-details">
+          <h4>Found in Database:</h4>
+          <div className="detail-row">
+            <span className="detail-label">🪪 Case ID:</span>
+            <span className="detail-value">{statusMessage.details.foundCaseId}</span>
+          </div>
+          <div className="detail-row">
+            <span className="detail-label">👤 Case Name:</span>
+            <span className="detail-value">{statusMessage.details.foundCaseName}</span>
+          </div>
+          <p className="warning-hint">Please verify the case details and search again with the correct name.</p>
+        </div>
+      )}
+    </div>
+  );
+};
   const handleReset = () => {
     setResult(null);
     setSources([]);
@@ -200,8 +326,10 @@ const renderAnswer = (text) => {
       </div>
 
       {/* Status */}
-      {(isLoading || result) && <StatusBadge running={true} />}
+      {/*{(isLoading || result) && <StatusBadge running={true} />} */}
 
+      {(isLoading || result) && <StatusBadge running={isLoading} />}
+      {statusMessage && renderStatusMessage()}
       {/* Results */}
 
       {result && (
@@ -246,3 +374,4 @@ const renderAnswer = (text) => {
     </div>
   );
 }
+
