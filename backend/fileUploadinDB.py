@@ -31,7 +31,7 @@ app.add_middleware(
 UPLOAD_FOLDER = "docs"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# ── DB ───────────────────────────────────────────
+
 db = pymysql.connect(
     host="localhost",
     user="root",
@@ -178,6 +178,7 @@ class DeleteRequest(BaseModel):
     file_names: List[str]
 
 class HearingRequest(BaseModel):
+    case_id: str 
     case_name: str
     next_hearing_date: str
     last_hearing_date: str = ""
@@ -227,11 +228,11 @@ def delete_files(data: DeleteRequest):
 def add_hearing(data: HearingRequest):
     cur = get_cursor()
     cur.execute(
-        "INSERT INTO client_details (case_name, next_hearing_date, last_hearing_date, notes, fee_paid, case_status) VALUES (%s, %s, %s, %s, %s, %s)",
-        (data.case_name, data.next_hearing_date, data.last_hearing_date or None, data.notes, data.fee_paid, data.case_status)
+        "INSERT INTO client_details (case_id,case_name, next_hearing_date, last_hearing_date, notes, fee_paid, case_status) VALUES (%s,%s, %s, %s, %s, %s, %s)",
+        (data.case_id,data.case_name, data.next_hearing_date, data.last_hearing_date or None, data.notes, data.fee_paid, data.case_status)
     )
     db.commit()
-    return {"message": "✅ Client details added"}
+    return {"message": "Client details added"}
 
 @app.get("/hearings")
 def get_all_hearings():
