@@ -145,12 +145,12 @@ def run_ingestion():
         )
         print(f"Ingestion done — {len(chunks)} chunks indexed")
 
-        # ✅ notify retrivalPipeline to reload ChromaDB
+        # notify retrivalPipeline to reload ChromaDB
         try:
             http_requests.post("http://localhost:8002/reload", timeout=5)
-            print("✅ retrivalPipeline reloaded")
+            print("retrivalPipeline reloaded")
         except Exception as e:
-            print(f"⚠️ Could not reload retrivalPipeline: {e}")
+            print(f"Could not reload retrivalPipeline: {e}")
 
     except Exception as e:
         print(f"Ingestion error: {e}")
@@ -173,7 +173,7 @@ observer.schedule(DocsWatcher(), path=UPLOAD_FOLDER, recursive=False)
 observer.start()
 print("Watching docs folder for changes...")
 
-# ── Models ───────────────────────────────────────
+# Models
 class DeleteRequest(BaseModel):
     file_names: List[str]
 
@@ -186,7 +186,16 @@ class HearingRequest(BaseModel):
     fee_paid: float = 0.00
     case_status: str = "Current"
 
-# ── File endpoints ───────────────────────────────
+class UpdateHearingRequest(BaseModel):
+    case_id: str
+    case_name: str
+    next_hearing_date: str
+    last_hearing_date: str = ""
+    notes: str = ""
+    fee_paid: float = 0.00
+    case_status: str = "Current"
+
+# File endpoints 
 @app.post("/upload")
 async def upload_files(files: List[UploadFile] = File(...)):
     uploaded_files = []
@@ -238,7 +247,7 @@ def add_hearing(data: HearingRequest):
 def get_all_hearings():
     cur = get_cursor()
     cur.execute("""
-        SELECT id, case_name, next_hearing_date, last_hearing_date, notes, fee_paid, case_status
+        SELECT id, case_id, case_name, next_hearing_date, last_hearing_date, notes, fee_paid, case_status
         FROM client_details
         ORDER BY next_hearing_date ASC
     """)
@@ -247,20 +256,68 @@ def get_all_hearings():
         "all_hearings": [
             {
                 "id": r[0],
-                "case_name": r[1],
-                "next_hearing_date": str(r[2]) if r[2] else "Not specified",
-                "last_hearing_date": str(r[3]) if r[3] else "Not specified",
-                "notes": r[4],
-                "fee_paid": float(r[5]),
-                "case_status": r[6]
+                "case_id": r[1],
+                "case_name": r[2],
+                "next_hearing_date": str(r[3]) if r[3] else "Not specified",
+                "last_hearing_date": str(r[4]) if r[4] else "Not specified",
+                "notes": r[5],
+                "fee_paid": float(r[6]),
+                "case_status": r[7]
             }
             for r in rows
         ]
     }
 
+@app.put("/hearings/{hearing_id}")
+def update_hearing(hearing_id: int, data: UpdateHearingRequest):
+    """Update an existing hearing record"""
+    try:
+        cur = get_cursor()
+        cur.execute(
+            """UPDATE client_details 
+               SET case_id = %s, case_name = %s, next_hearing_date = %s, 
+                   last_hearing_date = %s, notes = %s, fee_paid = %s, case_status = %s
+               WHERE id = %s""",
+            (data.case_id, data.case_name, data.next_hearing_date, 
+             data.last_hearing_date or None, data.notes, data.fee_paid, 
+             data.case_status, hearing_id)
+        )
+        db.commit()
+        
+        # Trigger re-ingestion to update ChromaDB
+        try:
+            http_requests.post("http://localhost:8002/reload", timeout=5)
+            print("retrivalPipeline reloaded after update")
+        except Exception as e:
+            print(f"Could not reload retrivalPipeline: {e}")
+        
+        return {"message": "Client details updated", "status": "success", "id": hearing_id}
+    except Exception as e:
+        return {"message": f"Update failed: {str(e)}", "status": "error"}
+ 
+
+ # @app.delete("/hearings/{hearing_id}")
+# def delete_hearing(hearing_id: int):
+#     cur = get_cursor()
+#     cur.execute("DELETE FROM client_details WHERE id = %s", (hearing_id,))
+#     db.commit()
+#     return {"message": "Deleted"}
+
 @app.delete("/hearings/{hearing_id}")
 def delete_hearing(hearing_id: int):
-    cur = get_cursor()
-    cur.execute("DELETE FROM client_details WHERE id = %s", (hearing_id,))
-    db.commit()
-    return {"message": "✅ Deleted"}
+    """Delete a hearing record"""
+    try:
+        cur = get_cursor()
+        cur.execute("DELETE FROM client_details WHERE id = %s", (hearing_id,))
+        db.commit()
+        
+            
+        try:
+            http_requests.post("http://localhost:8002/reload", timeout=5)
+            print("retrivalPipeline reloaded after deletion")
+        except Exception as e:
+            print(f"Could not reload retrivalPipeline: {e}")
+        
+        return {"message": "Deleted", "status": "success"}
+    except Exception as e:
+        return {"message": f"Delete failed: {str(e)}", "status": "error"}

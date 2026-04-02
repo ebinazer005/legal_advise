@@ -1,4 +1,4 @@
-# #uvicorn retrivalPipeline:app --reload --port 8002
+# uvicorn retrivalPipeline:app --reload --port 8002
 from fastapi import FastAPI
 from pydantic import BaseModel
 from langchain_chroma import Chroma
